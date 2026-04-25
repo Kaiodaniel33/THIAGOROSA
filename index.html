@@ -14,7 +14,8 @@
                 extend: {
                     fontFamily: { sans: ['Inter', 'sans-serif'] },
                     colors: {
-                        brand: { 400: '#60a5fa', 500: '#3b82f6', 600: '#2563eb' },
+                        /* Paleta Dourada/Laranja solicitada */
+                        brand: { 400: '#fbbf24', 500: '#f59e0b', 600: '#ea580c' },
                         dark: { 950: '#020617', 900: '#0f172a', 800: '#1e293b' }
                     }
                 }
@@ -23,7 +24,7 @@
     </script>
     <style>
         body { background-color: #020617; color: #f8fafc; overflow-x: hidden; }
-        .text-glow { text-shadow: 0 0 20px rgba(59, 130, 246, 0.5); }
+        .text-glow { text-shadow: 0 0 20px rgba(245, 158, 11, 0.5); }
         .glass-panel { background: rgba(15, 23, 42, 0.6); backdrop-filter: blur(12px); border: 1px solid rgba(51, 65, 85, 0.5); }
         
         /* Animações Interativas ao rolar a página */
@@ -35,13 +36,14 @@
 
     <nav class="fixed w-full glass-panel z-50 border-b border-dark-800 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center relative">
-            <a href="#" class="text-2xl font-black tracking-tighter text-white z-20">
-                THIAGO<span class="text-brand-500">ROSA.</span>
+            
+            <a href="#" class="z-20">
+                <img src="logo_thiago.png" alt="Logo Thiago Rosa" class="h-10 md:h-12 w-auto">
             </a>
 
             <div class="hidden md:flex space-x-8 text-sm font-semibold text-slate-300">
                 <a href="#metodo" class="hover:text-white transition-colors">O Método</a>
-                <a href="#depoimentos" class="hover:text-white transition-colors">Resultados</a>
+                <a href="#evolucao" class="hover:text-white transition-colors">Resultados</a>
                 <a href="#planos" class="hover:text-white transition-colors">Planos</a>
                 <a href="#faq" class="hover:text-white transition-colors">Dúvidas</a>
             </div>
@@ -60,7 +62,7 @@
 
         <div id="mobile-menu" class="hidden absolute top-0 left-0 w-full h-screen bg-dark-950 flex flex-col items-center justify-center space-y-8 text-xl font-bold z-10">
             <a href="#metodo" class="mobile-link text-slate-300 hover:text-white">O Método</a>
-            <a href="#depoimentos" class="mobile-link text-slate-300 hover:text-white">Resultados</a>
+            <a href="#evolucao" class="mobile-link text-slate-300 hover:text-white">Resultados</a>
             <a href="#planos" class="mobile-link text-slate-300 hover:text-white">Planos</a>
             <a href="https://wa.me/5544991772323?text=Ol%C3%A1%20tudo%20bem%20Thiago.%20Vi%20o%20seu%20site%20e%20quero%20entender%20mais%20um%20pouco%20sobre%20a%20mentoria%20e%20tudo%20isso." target="_blank" class="bg-brand-600 text-white px-8 py-4 rounded-xl w-4/5 text-center mt-6 shadow-lg shadow-brand-500/20 active:scale-95 transition-transform">
                 <i class="fa-brands fa-whatsapp mr-2"></i> Chamar no WhatsApp
@@ -81,12 +83,12 @@
                 Pare de treinar fofo. Construa um <span class="text-brand-400 text-glow">físico de respeito</span> com o método certo.
             </h1>
             
-            <p class="text-lg text-slate-400 max-w-2xl mx-auto md:mx-0 mb-8 font-medium">
+            <p class="text-lg text-slate-300 max-w-2xl mx-auto md:mx-0 mb-8 font-medium">
                 Crescer sem acompanhamento e sem ajuste de carga (KG) é queimar largada. Tenha o passo a passo exato, correções em tempo real e a ciência dos maiores do Brasil no seu treino.
             </p>
             
             <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start mb-10">
-                <a href="https://wa.me/5544991772323?text=Ol%C3%A1%20tudo%20bem%20Thiago.%20Vi%20o%20seu%20site%20e%20quero%20entender%20mais%20um%20pouco%20sobre%20a%20mentoria%20e%20tudo%20isso." target="_blank" class="bg-brand-600 hover:bg-brand-500 text-white text-lg font-bold py-4 px-8 rounded-xl shadow-[0_0_25px_rgba(59,130,246,0.5)] transition-all hover:scale-105 flex items-center justify-center group">
+                <a href="https://wa.me/5544991772323?text=Ol%C3%A1%20tudo%20bem%20Thiago.%20Vi%20o%20seu%20site%20e%20quero%20entender%20mais%20um%20pouco%20sobre%20a%20mentoria%20e%20tudo%20isso." target="_blank" class="bg-brand-600 hover:bg-brand-500 text-white text-lg font-bold py-4 px-8 rounded-xl shadow-[0_0_25px_rgba(245,158,11,0.5)] transition-all hover:scale-105 flex items-center justify-center group">
                     <i class="fa-brands fa-whatsapp text-2xl mr-3 group-hover:rotate-12 transition-transform"></i> Quero Iniciar Minha Transformação
                 </a>
             </div>
@@ -104,9 +106,9 @@
 
         <div class="md:w-2/5 mt-16 md:mt-0 flex justify-center z-10 reveal">
             <div class="relative w-full max-w-[320px] md:max-w-sm group">
-                <div class="absolute -inset-1 bg-gradient-to-r from-brand-600 to-blue-400 rounded-[2.5rem] blur opacity-20 group-hover:opacity-40 transition duration-1000 group-hover:duration-200"></div>
+                <div class="absolute -inset-1 bg-gradient-to-r from-brand-600 to-brand-400 rounded-[2.5rem] blur opacity-20 group-hover:opacity-40 transition duration-1000 group-hover:duration-200"></div>
                 <div class="aspect-[4/5] bg-dark-800 rounded-[2rem] border border-dark-700 overflow-hidden relative shadow-2xl">
-                    <img src="thiago.png" alt="Thiago Rosa Personal" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 transform group-hover:scale-105">
+                    <img src="thiagorosa.jpg" alt="Thiago Rosa Personal" class="w-full h-full object-cover transition-all duration-700 transform group-hover:scale-105">
                     <div class="absolute bottom-4 left-4 right-4 glass-panel p-3 rounded-xl backdrop-blur-md border-white/10 text-center">
                         <p class="text-white font-black text-lg">Thiago Rosa</p>
                         <p class="text-brand-400 text-xs font-bold uppercase tracking-wide">Personal & Nutrição</p>
@@ -168,20 +170,48 @@
                 <div class="w-16 h-16 bg-dark-800 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-brand-600/20 transition-colors border border-dark-700 group-hover:border-brand-500/50">
                     <i class="fa-solid fa-arrow-up-right-dots text-3xl text-brand-400"></i>
                 </div>
-                <h3 class="text-xl font-bold text-white mb-3">Ajuste e Controle de Carga (KG)</h3>
+                <h3 class="text-xl font-bold text-white mb-3">Ajuste e Controle de Carga</h3>
                 <p class="text-slate-400 text-sm leading-relaxed">Você vai ficar mais forte. Ponto. Fazemos a progressão matemática da sua força semanalmente. É assim que o músculo entende que precisa crescer.</p>
             </div>
         </div>
     </section>
 
-    <section id="depoimentos" class="py-24 bg-dark-900/60 border-y border-dark-800 relative">
+    <section id="evolucao" class="py-24 max-w-7xl mx-auto px-6 relative reveal border-t border-dark-800">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-5xl font-black text-white tracking-tight">A prática além da <span class="text-brand-400">teoria.</span></h2>
+            <p class="text-slate-400 mt-4 text-lg">A experiência de quem vive o esporte e aplica o método na vida real.</p>
+        </div>
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div class="glass-panel p-5 rounded-[2rem] hover:border-brand-500/50 transition-colors group">
+                <div class="aspect-square md:aspect-video w-full rounded-2xl overflow-hidden bg-dark-800 relative shadow-inner">
+                    <img src="competicao_thiago.jpg" alt="Thiago Rosa Competição" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute bottom-4 left-4 right-4 sm:right-auto bg-dark-950/80 backdrop-blur-md px-5 py-3 rounded-xl border border-dark-700">
+                        <p class="text-white font-bold text-sm"><i class="fa-solid fa-trophy text-brand-400 mr-2"></i> Shape de Competição (Thiago Rosa)</p>
+                        <p class="text-slate-400 text-xs mt-1">Conhecimento testado no próprio corpo.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass-panel p-5 rounded-[2rem] hover:border-brand-500/50 transition-colors group">
+                <div class="aspect-square md:aspect-video w-full rounded-2xl overflow-hidden bg-dark-800 relative shadow-inner">
+                    <img src="projeto_aluno.jpg" alt="Evolução Aluno" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute bottom-4 left-4 right-4 sm:right-auto bg-dark-950/80 backdrop-blur-md px-5 py-3 rounded-xl border border-dark-700">
+                        <p class="text-white font-bold text-sm"><i class="fa-solid fa-fire text-brand-400 mr-2"></i> Projeto Mentorado</p>
+                        <p class="text-slate-400 text-xs mt-1">Transformação real de quem seguiu o método.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-dark-900/40 border-y border-dark-800 relative">
         <div class="max-w-7xl mx-auto px-6 mb-16 text-center md:text-left reveal">
             <h2 class="text-3xl md:text-5xl font-black text-white tracking-tight">O que dizem os meus <span class="text-brand-400">mentorados.</span></h2>
             <p class="text-slate-400 mt-4 text-lg">Pessoas reais. Resultados visíveis na primeira semana.</p>
         </div>
 
         <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            
             <div class="glass-panel p-6 rounded-3xl flex flex-col hover:border-brand-500/30 transition-colors reveal">
                 <div class="flex text-brand-400 text-xs mb-4"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
                 <p class="text-slate-300 text-sm italic mb-6 flex-grow leading-relaxed">"Cara, a correção em vídeo que o Thiago faz pelo WhatsApp é sensacional. O cara viu um erro no meu pé que estava limitando meu agachamento. Hoje tô botando carga que nunca imaginei."</p>
@@ -190,7 +220,6 @@
                     <div><h4 class="text-white font-bold text-sm">Henrique D.</h4><p class="text-slate-500 text-xs">Empresário</p></div>
                 </div>
             </div>
-
             <div class="glass-panel p-6 rounded-3xl flex flex-col hover:border-brand-500/30 transition-colors reveal">
                 <div class="flex text-brand-400 text-xs mb-4"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
                 <p class="text-slate-300 text-sm italic mb-6 flex-grow leading-relaxed">"Sempre fui o cara magro na academia treinando sem ficha. Em 3 meses de mentoria meu peitoral e braço mudaram de formato. Ele realmente controla a sua carga (kg)."</p>
@@ -199,7 +228,6 @@
                     <div><h4 class="text-white font-bold text-sm">Rafael T.</h4><p class="text-slate-500 text-xs">Desenvolvedor</p></div>
                 </div>
             </div>
-
             <div class="glass-panel p-6 rounded-3xl flex flex-col hover:border-brand-500/30 transition-colors reveal">
                 <div class="flex text-brand-400 text-xs mb-4"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
                 <p class="text-slate-300 text-sm italic mb-6 flex-grow leading-relaxed">"O app dele é perfeito. Chego na academia, sei exatamente o que fazer. E quando ele gravou com o Muzy eu tive certeza que tava com o melhor."</p>
@@ -208,7 +236,6 @@
                     <div><h4 class="text-white font-bold text-sm">Gabriel S.</h4><p class="text-slate-500 text-xs">Engenheiro</p></div>
                 </div>
             </div>
-
             <div class="glass-panel p-6 rounded-3xl flex flex-col hover:border-brand-500/30 transition-colors reveal">
                 <div class="flex text-brand-400 text-xs mb-4"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
                 <p class="text-slate-300 text-sm italic mb-6 flex-grow leading-relaxed">"Tinha medo de contratar consultoria online e ficar jogado. O Thiago manda áudio, cobra o treino e não deixa você falhar. O shape veio muito rápido."</p>
@@ -226,7 +253,6 @@
                     <div><h4 class="text-white font-bold text-sm">Amanda F.</h4><p class="text-slate-500 text-xs">Arquiteta</p></div>
                 </div>
             </div>
-
             <div class="glass-panel p-6 rounded-3xl flex flex-col hover:border-brand-500/30 transition-colors reveal">
                 <div class="flex text-brand-400 text-xs mb-4"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
                 <p class="text-slate-300 text-sm italic mb-6 flex-grow leading-relaxed">"Treinar e ter orientações nutricionais ao mesmo tempo mudou o jogo. Sequei 6kg de gordura mantendo toda a minha massa magra. Ele é muito didático nos vídeos!"</p>
@@ -235,7 +261,6 @@
                     <div><h4 class="text-white font-bold text-sm">Juliana L.</h4><p class="text-slate-500 text-xs">Advogada</p></div>
                 </div>
             </div>
-
             <div class="glass-panel p-6 rounded-3xl flex flex-col hover:border-brand-500/30 transition-colors reveal">
                 <div class="flex text-brand-400 text-xs mb-4"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
                 <p class="text-slate-300 text-sm italic mb-6 flex-grow leading-relaxed">"O que eu mais gosto é que ele responde o WhatsApp a qualquer hora. Se eu mudar o horário do treino e a máquina tiver ocupada, ele me passa uma adaptação na hora."</p>
@@ -244,7 +269,6 @@
                     <div><h4 class="text-white font-bold text-sm">Camila P.</h4><p class="text-slate-500 text-xs">Professora</p></div>
                 </div>
             </div>
-
             <div class="glass-panel p-6 rounded-3xl flex flex-col hover:border-brand-500/30 transition-colors reveal">
                 <div class="flex text-brand-400 text-xs mb-4"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
                 <p class="text-slate-300 text-sm italic mb-6 flex-grow leading-relaxed">"Vale cada centavo. A periodização é impecável, os treinos mudam quando precisam mudar. Ganhei tônus nas pernas e perdi a flacidez do braço que tanto me incomodava."</p>
@@ -253,7 +277,6 @@
                     <div><h4 class="text-white font-bold text-sm">Bruna M.</h4><p class="text-slate-500 text-xs">Estudante</p></div>
                 </div>
             </div>
-
         </div>
     </section>
 
@@ -264,7 +287,6 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            
             <div class="glass-panel p-8 md:p-10 rounded-[2.5rem] flex flex-col hover:border-brand-500/50 transition-colors reveal">
                 <h3 class="text-2xl font-black text-white mb-2">Mensal</h3>
                 <p class="text-slate-400 text-sm mb-6 pb-6 border-b border-dark-700/50">Para iniciar o método.</p>
@@ -278,7 +300,7 @@
                 </a>
             </div>
 
-            <div class="glass-panel p-8 md:p-10 rounded-[2.5rem] border-brand-500 relative flex flex-col shadow-[0_0_40px_rgba(59,130,246,0.15)] transform md:-translate-y-6 reveal delay-100">
+            <div class="glass-panel p-8 md:p-10 rounded-[2.5rem] border-brand-500 relative flex flex-col shadow-[0_0_40px_rgba(245,158,11,0.15)] transform md:-translate-y-6 reveal delay-100">
                 <div class="absolute top-0 inset-x-0 bg-gradient-to-r from-brand-600 to-brand-400 text-white text-xs font-black py-1.5 text-center rounded-t-[2.5rem] uppercase tracking-widest">A Escolha Inteligente</div>
                 <h3 class="text-2xl font-black text-white mb-2 mt-4">Trimestral</h3>
                 <p class="text-slate-400 text-sm mb-6 pb-6 border-b border-dark-700/50">Comprometimento de verdade gera shape de verdade.</p>
@@ -336,14 +358,14 @@
     <section class="py-20 px-6 reveal">
         <div class="max-w-4xl mx-auto bg-gradient-to-br from-dark-900 to-dark-950 border border-brand-500/20 rounded-[3rem] p-10 md:p-16 text-center relative overflow-hidden shadow-2xl">
             <div class="absolute -top-24 -right-24 w-64 h-64 bg-brand-600/30 rounded-full blur-[80px]"></div>
-            <div class="absolute -bottom-24 -left-24 w-64 h-64 bg-blue-500/20 rounded-full blur-[80px]"></div>
+            <div class="absolute -bottom-24 -left-24 w-64 h-64 bg-orange-500/20 rounded-full blur-[80px]"></div>
             
             <div class="relative z-10">
                 <h2 class="text-3xl md:text-5xl font-black text-white mb-6 tracking-tight">O próximo nível do seu shape está a um clique.</h2>
                 <p class="text-slate-300 font-medium text-lg mb-10 max-w-xl mx-auto">
                     Vagas super restritas devido ao alto nível de acompanhamento pelo WhatsApp. Aperte no botão e fale comigo antes que a agenda de mentorados feche.
                 </p>
-                <a href="https://wa.me/5544991772323?text=Ol%C3%A1%20tudo%20bem%20Thiago.%20Vi%20o%20seu%20site%20e%20quero%20entender%20mais%20um%20pouco%20sobre%20a%20mentoria%20e%20tudo%20isso." target="_blank" class="inline-flex items-center justify-center bg-brand-600 hover:bg-brand-500 text-white text-xl font-bold py-5 px-10 rounded-2xl shadow-[0_0_20px_rgba(59,130,246,0.3)] transition-all hover:scale-105 active:scale-95 w-full sm:w-auto">
+                <a href="https://wa.me/5544991772323?text=Ol%C3%A1%20tudo%20bem%20Thiago.%20Vi%20o%20seu%20site%20e%20quero%20entender%20mais%20um%20pouco%20sobre%20a%20mentoria%20e%20tudo%20isso." target="_blank" class="inline-flex items-center justify-center bg-brand-600 hover:bg-brand-500 text-white text-xl font-bold py-5 px-10 rounded-2xl shadow-[0_0_20px_rgba(245,158,11,0.3)] transition-all hover:scale-105 active:scale-95 w-full sm:w-auto">
                     <i class="fa-brands fa-whatsapp text-2xl mr-3"></i> Falar com o Thiago Agora
                 </a>
             </div>
@@ -353,7 +375,7 @@
     <footer class="bg-dark-950 border-t border-dark-900 py-12">
         <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
             <div class="text-center md:text-left">
-                <h3 class="text-2xl font-black text-white tracking-tight">THIAGO<span class="text-brand-500">ROSA.</span></h3>
+                <img src="logo_thiago.png" alt="Logo Thiago Rosa" class="h-10 w-auto mx-auto md:mx-0 mb-3">
                 <p class="text-slate-500 text-sm mt-1">Mentoria Fitness Inteligente | CREF: 48153-G</p>
             </div>
             <div class="flex space-x-5">
@@ -368,8 +390,12 @@
         </div>
     </footer>
 
+    <a href="https://wa.me/5544991772323" target="_blank" class="fixed bottom-6 right-6 w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center text-3xl shadow-[0_0_20px_rgba(37,211,102,0.4)] hover:scale-110 transition-transform z-50">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
     <script>
-        // 1. Controle do Menu Mobile (Sem bugs)
+        // 1. Controle do Menu Mobile
         const btn = document.getElementById('menu-btn');
         const menu = document.getElementById('mobile-menu');
         const icon = document.getElementById('menu-icon');
@@ -401,7 +427,7 @@
             }
         });
 
-        // 2. Interatividade FAQ (Abre/Fecha)
+        // 2. Interatividade FAQ
         const faqBtns = document.querySelectorAll('.faq-btn');
         faqBtns.forEach(btn => {
             btn.addEventListener('click', function() {
@@ -409,28 +435,27 @@
                 const icon = this.querySelector('i');
                 
                 content.classList.toggle('hidden');
-                icon.classList.toggle('rotate-45'); // Transforma o + em um X suave
+                icon.classList.toggle('rotate-45'); 
                 icon.classList.toggle('text-white');
             });
         });
 
-        // 3. Scroll Animations (Elementos surgindo na tela interativamente)
+        // 3. Scroll Animations 
         const observerOptions = {
             root: null,
             rootMargin: '0px',
-            threshold: 0.15 // Dispara quando 15% do elemento estiver visível
+            threshold: 0.15 
         };
 
         const observer = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('active');
-                    observer.unobserve(entry.target); // Anima só na primeira vez
+                    observer.unobserve(entry.target); 
                 }
             });
         }, observerOptions);
 
-        // Observa todos os elementos com a classe .reveal
         document.querySelectorAll('.reveal').forEach(el => {
             observer.observe(el);
         });
