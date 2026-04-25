@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thiago Rosa | Mentoria Fitness de Alta Performance</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        brand: { 400: '#60a5fa', 500: '#3b82f6', 600: '#2563eb' },
+                        dark: { 950: '#020617', 900: '#0f172a', 800: '#1e293b' }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #020617; color: #f8fafc; overflow-x: hidden; }
+        .text-glow { text-shadow: 0 0 20px rgba(59, 130, 246, 0.5); }
+        .glass-panel { background: rgba(15, 23, 42, 0.6); backdrop-filter: blur(12px); border: 1px solid rgba(51, 65, 85, 0.5); }
+        
+        /* Animações Interativas ao rolar a página */
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.5, 0, 0, 1); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body class="antialiased selection:bg-brand-500 selection:text-white">
+
+    <nav class="fixed w-full glass-panel z-50 border-b border-dark-800 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center relative">
+            <a href="#" class="text-2xl font-black tracking-tighter text-white z-20">
+                THIAGO<span class="text-brand-500">ROSA.</span>
+            </a>
+
+            <div class="hidden md:flex space-x-8 text-sm font-semibold text-slate-300">
+                <a href="#metodo" class="hover:text-white transition-colors">O Método</a>
+                <a href="#depoimentos" class="hover:text-white transition-colors">Resultados</a>
+                <a href="#planos" class="hover:text-white transition-colors">Planos</a>
+                <a href="#faq" class="hover:text-white transition-colors">Dúvidas</a>
+            </div>
+
+            <div class="hidden md:flex items-center space-x-4">
+                <a href="https://instagram.com/othiagorosatreinador" target="_blank" class="text-slate-400 hover:text-brand-500 text-xl transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://wa.me/5544991772323?text=Ol%C3%A1%20tudo%20bem%20Thiago.%20Vi%20o%20seu%20site%20e%20quero%20entender%20mais%20um%20pouco%20sobre%20a%20mentoria%20e%20tudo%20isso." target="_blank" class="bg-brand-600 hover:bg-brand-500 text-white px-6 py-2.5 rounded-lg font-bold transition-all shadow-lg hover:shadow-brand-500/40 hover:-translate-y-0.5">
+                    Falar com Thiago
+                </a>
+            </div>
+
+            <button id="menu-btn" class="md:hidden text-slate-300 text-3xl focus:outline-none z-20">
+                <i class="fa-solid fa-bars" id="menu-icon"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden absolute top-0 left-0 w-full h-screen bg-dark-950 flex flex-col items-center justify-center space-y-8 text-xl font-bold z-10">
+            <a href="#metodo" class="mobile-link text-slate-300 hover:text-white">O Método</a>
+            <a href="#depoimentos" class="mobile-link text-slate-300 hover:text-white">Resultados</a>
+            <a href="#planos" class="mobile-link text-slate-300 hover:text-white">Planos</a>
+            <a href="https://wa.me/5544991772323?text=Ol%C3%A1%20tudo%20bem%20Thiago.%20Vi%20o%20seu%20site%20e%20quero%20entender%20mais%20um%20pouco%20sobre%20a%20mentoria%20e%20tudo%20isso." target="_blank" class="bg-brand-600 text-white px-8 py-4 rounded-xl w-4/5 text-center mt-6 shadow-lg shadow-brand-500/20 active:scale-95 transition-transform">
+                <i class="fa-brands fa-whatsapp mr-2"></i> Chamar no WhatsApp
+            </a>
+            <a href="https://instagram.com/othiagorosatreinador" target="_blank" class="text-slate-400 mt-4"><i class="fa-brands fa-instagram mr-2"></i> othiagorosatreinador</a>
+        </div>
+    </nav>
+
+    <header class="relative pt-32 pb-20 px-6 md:pt-48 md:pb-32 flex flex-col md:flex-row items-center max-w-7xl mx-auto overflow-hidden">
+        <div class="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-brand-600/20 rounded-full blur-[120px] -z-10 animate-pulse"></div>
+
+        <div class="md:w-3/5 text-center md:text-left z-10 reveal">
+            <div class="inline-block border border-brand-500/30 bg-brand-500/10 text-brand-400 font-bold px-4 py-1.5 rounded-full text-xs md:text-sm mb-6 uppercase tracking-widest shadow-inner">
+                CREF: 48153-G | 8 Anos Mudando Corpos
+            </div>
+            
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-black text-white leading-tight mb-6 tracking-tight">
+                Pare de treinar fofo. Construa um <span class="text-brand-400 text-glow">físico de respeito</span> com o método certo.
+            </h1>
+            
+            <p class="text-lg text-slate-400 max-w-2xl mx-auto md:mx-0 mb-8 font-medium">
+                Crescer sem acompanhamento e sem ajuste de carga (KG) é queimar largada. Tenha o passo a passo exato, correções em tempo real e a ciência dos maiores do Brasil no seu treino.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start mb-10">
+                <a href="https://wa.me/5544991772323?text=Ol%C3%A1%20tudo%20bem%20Thiago.%20Vi%20o%20seu%20site%20e%20quero%20entender%20mais%20um%20pouco%20sobre%20a%20mentoria%20e%20tudo%20isso." target="_blank" class="bg-brand-600 hover:bg-brand-500 text-white text-lg font-bold py-4 px-8 rounded-xl shadow-[0_0_25px_rgba(59,130,246,0.5)] transition-all hover:scale-105 flex items-center justify-center group">
+                    <i class="fa-brands fa-whatsapp text-2xl mr-3 group-hover:rotate-12 transition-transform"></i> Quero Iniciar Minha Transformação
+                </a>
+            </div>
+
+            <div class="glass-panel p-4 rounded-2xl inline-flex items-center gap-4 text-left border-brand-500/30 hover:border-brand-500/50 transition-colors cursor-default">
+                <div class="w-14 h-14 bg-dark-800 rounded-full flex items-center justify-center shadow-inner">
+                    <i class="fa-solid fa-microphone-lines text-2xl text-brand-400"></i>
+                </div>
+                <div>
+                    <p class="text-[11px] text-slate-400 font-bold uppercase tracking-widest">Reconhecimento na Elite Fitness</p>
+                    <p class="text-sm md:text-base text-white font-bold">Podcaster com <span class="text-brand-400">Paulo Muzy</span> e <span class="text-brand-400">Julio Balestrin</span>.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="md:w-2/5 mt-16 md:mt-0 flex justify-center z-10 reveal">
+            <div class="relative w-full max-w-[320px] md:max-w-sm group">
+                <div class="absolute -inset-1 bg-gradient-to-r from-brand-600 to-blue-400 rounded-[2.5rem] blur opacity-20 group-hover:opacity-40 transition duration-1000 group-hover:duration-200"></div>
+                <div class="aspect-[4/5] bg-dark-800 rounded-[2rem] border border-dark-700 overflow-hidden relative shadow-2xl">
+                    <img src="thiago.png" alt="Thiago Rosa Personal" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 transform group-hover:scale-105">
+                    <div class="absolute bottom-4 left-4 right-4 glass-panel p-3 rounded-xl backdrop-blur-md border-white/10 text-center">
+                        <p class="text-white font-black text-lg">Thiago Rosa</p>
+                        <p class="text-brand-400 text-xs font-bold uppercase tracking-wide">Personal & Nutrição</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="metodo" class="py-24 max-w-7xl mx-auto px-6 relative">
+        <div class="text-center mb-16 reveal">
+            <h2 class="text-3xl md:text-5xl font-black text-white mb-4 tracking-tight">O sistema exato que gera <span class="text-brand-400">hipertrofia bruta.</span></h2>
+            <p class="text-slate-400 max-w-2xl mx-auto text-lg">Aqui não tem ficha de gaveta. É um acompanhamento corpo a corpo, feito para quem quer resultado rápido e seguro.</p>
+        </div>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="glass-panel p-8 rounded-3xl hover:-translate-y-2 transition-all duration-300 group reveal">
+                <div class="w-16 h-16 bg-dark-800 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-brand-600/20 transition-colors border border-dark-700 group-hover:border-brand-500/50">
+                    <i class="fa-solid fa-mobile-screen text-3xl text-brand-400"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-3">Aplicativo Exclusivo</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">Esqueça o papelzinho da academia. Tenha seu treino, histórico de cargas e periodização direto no celular, com uma interface absurda de fácil.</p>
+            </div>
+            
+            <div class="glass-panel p-8 rounded-3xl border-brand-500/30 hover:border-brand-500 hover:-translate-y-2 transition-all duration-300 group relative overflow-hidden reveal">
+                <div class="absolute top-0 right-0 bg-brand-600 text-white text-[10px] font-bold px-4 py-1.5 rounded-bl-xl uppercase tracking-wider">Acesso VIP</div>
+                <div class="w-16 h-16 bg-dark-800 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-brand-600/20 transition-colors border border-dark-700 group-hover:border-brand-500/50">
+                    <i class="fa-brands fa-whatsapp text-3xl text-brand-400"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-3">WhatsApp Sem Restrição</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">Você não fala com robôs. Dúvida sobre o peso? Dor na articulação? Me manda mensagem na hora do treino e eu te ajusto na mesma hora.</p>
+            </div>
+
+            <div class="glass-panel p-8 rounded-3xl hover:-translate-y-2 transition-all duration-300 group reveal">
+                <div class="w-16 h-16 bg-dark-800 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-brand-600/20 transition-colors border border-dark-700 group-hover:border-brand-500/50">
+                    <i class="fa-solid fa-person-chalkboard text-3xl text-brand-400"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-3">Vídeos Gravados por Mim</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">Nada de banco de imagens genérico. Eu mesmo gravo a execução perfeita para te mostrar a postura, a cadência e onde o músculo deve fritar.</p>
+            </div>
+
+            <div class="glass-panel p-8 rounded-3xl hover:-translate-y-2 transition-all duration-300 group reveal">
+                <div class="w-16 h-16 bg-dark-800 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-brand-600/20 transition-colors border border-dark-700 group-hover:border-brand-500/50">
+                    <i class="fa-solid fa-bolt text-3xl text-brand-400"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-3">Métodos Avançados</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">O treino é montado sob medida. Vou aplicar técnicas de Drop-set, Rest-Pause e FST-7 baseados no seu nível para estourar platôs de resultados.</p>
+            </div>
+
+            <div class="glass-panel p-8 rounded-3xl hover:-translate-y-2 transition-all duration-300 group reveal">
+                <div class="w-16 h-16 bg-dark-800 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-brand-600/20 transition-colors border border-dark-700 group-hover:border-brand-500/50">
+                    <i class="fa-solid fa-video text-3xl text-brand-400"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-3">Correção em Tempo Real</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">Filmou sua série? Me manda. Eu analiso o seu ângulo, sua amplitude e te corrijo para você nunca se lesionar e pegar muito mais peso com segurança.</p>
+            </div>
+
+            <div class="glass-panel p-8 rounded-3xl hover:-translate-y-2 transition-all duration-300 group reveal">
+                <div class="w-16 h-16 bg-dark-800 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-brand-600/20 transition-colors border border-dark-700 group-hover:border-brand-500/50">
+                    <i class="fa-solid fa-arrow-up-right-dots text-3xl text-brand-400"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-3">Ajuste e Controle de Carga (KG)</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">Você vai ficar mais forte. Ponto. Fazemos a progressão matemática da sua força semanalmente. É assim que o músculo entende que precisa crescer.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="depoimentos" class="py-24 bg-dark-900/60 border-y border-dark-800 relative">
+        <div class="max-w-7xl mx-auto px-6 mb-16 text-center md:text-left reveal">
+            <h2 class="text-3xl md:text-5xl font-black text-white tracking-tight">O que dizem os meus <span class="text-brand-400">mentorados.</span></h2>
+            <p class="text-slate-400 mt-4 text-lg">Pessoas reais. Resultados visíveis na primeira semana.</p>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            <div class="glass-panel p-6 rounded-3xl flex flex-col hover:border-brand-500/30 transition-colors reveal">
+                <div class="flex text-brand-400 text-xs mb-4"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                <p class="text-slate-300 text-sm italic mb-6 flex-grow leading-relaxed">"Cara, a correção em vídeo que o Thiago faz pelo WhatsApp é sensacional. O cara viu um erro no meu pé que estava limitando meu agachamento. Hoje tô botando carga que nunca imaginei."</p>
+                <div class="flex items-center gap-3 pt-4 border-t border-dark-700/50">
+                    <div class="w-10 h-10 bg-dark-800 border border-dark-600 rounded-full flex items-center justify-center text-white font-black">H</div>
+                    <div><h4 class="text-white font-bold text-sm">Henrique D.</h4><p class="text-slate-500 text-xs">Empresário</p></div>
+                </div>
+            </div>
+
+            <div class="glass-panel p-6 rounded-3xl flex flex-col hover:border-brand-500/30 transition-colors reveal">
+                <div class="flex text-brand-400 text-xs mb-4"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                <p class="text-slate-300 text-sm italic mb-6 flex-grow leading-relaxed">"Sempre fui o cara magro na academia treinando sem ficha. Em 3 meses de mentoria meu peitoral e braço mudaram de formato. Ele realmente controla a sua carga (kg)."</p>
+                <div class="flex items-center gap-3 pt-4 border-t border-dark-700/50">
+                    <div class="w-10 h-10 bg-dark-800 border border-dark-600 rounded-full flex items-center justify-center text-white font-black">R</div>
+                    <div><h4 class="text-white font-bold text-sm">Rafael T.</h4><p class="text-slate-500 text-xs">Desenvolvedor</p></div>
+                </div>
+            </div>
+
+            <div class="glass-panel p-6 rounded-3xl flex flex-col hover:border-brand-500/30 transition-colors reveal">
+                <div class="flex text-brand-400 text-xs mb-4"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                <p class="text-slate-300 text-sm italic mb-6 flex-grow leading-relaxed">"O app dele é perfeito. Chego na academia, sei exatamente o que fazer. E quando ele gravou com o Muzy eu tive certeza que tava com o melhor."</p>
+                <div class="flex items-center gap-3 pt-4 border-t border-dark-700/50">
+                    <div class="w-10 h-10 bg-dark-800 border border-dark-600 rounded-full flex items-center justify-center text-white font-black">G</div>
+                    <div><h4 class="text-white font-bold text-sm">Gabriel S.</h4><p class="text-slate-500 text-xs">Engenheiro</p></div>
+                </div>
+            </div>
+
+            <div class="glass-panel p-6 rounded-3xl flex flex-col hover:border-brand-500/30 transition-colors reveal">
+                <div class="flex text-brand-400 text-xs mb-4"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                <p class="text-slate-300 text-sm italic mb-6 flex-grow leading-relaxed">"Tinha medo de contratar consultoria online e ficar jogado. O Thiago manda áudio, cobra o treino e não deixa você falhar. O shape veio muito rápido."</p>
+                <div class="flex items-center gap-3 pt-4 border-t border-dark-700/50">
+                    <div class="w-10 h-10 bg-dark-800 border border-dark-600 rounded-full flex items-center justify-center text-white font-black">M</div>
+                    <div><h4 class="text-white font-bold text-sm">Matheus C.</h4><p class="text-slate-500 text-xs">Médico</p></div>
+                </div>
+            </div>
+
+            <div class="glass-panel p-6 rounded-3xl flex flex-col hover:border-brand-500/30 transition-colors reveal">
+                <div class="flex text-brand-400 text-xs mb-4"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                <p class="text-slate-300 text-sm italic mb-6 flex-grow leading-relaxed">"Meu glúteo nunca desenvolvia. O Thiago viu um vídeo meu fazendo Stiff, ajustou a minha lombar por mensagem e no dia seguinte a dor foi embora. E o músculo acordou!"</p>
+                <div class="flex items-center gap-3 pt-4 border-t border-dark-700/50">
+                    <div class="w-10 h-10 bg-dark-800 border border-dark-600 rounded-full flex items-center justify-center text-white font-black">A</div>
+                    <div><h4 class="text-white font-bold text-sm">Amanda F.</h4><p class="text-slate-500 text-xs">Arquiteta</p></div>
+                </div>
+            </div>
+
+            <div class="glass-panel p-6 rounded-3xl flex flex-col hover:border-brand-500/30 transition-colors reveal">
+                <div class="flex text-brand-400 text-xs mb-4"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                <p class="text-slate-300 text-sm italic mb-6 flex-grow leading-relaxed">"Treinar e ter orientações nutricionais ao mesmo tempo mudou o jogo. Sequei 6kg de gordura mantendo toda a minha massa magra. Ele é muito didático nos vídeos!"</p>
+                <div class="flex items-center gap-3 pt-4 border-t border-dark-700/50">
+                    <div class="w-10 h-10 bg-dark-800 border border-dark-600 rounded-full flex items-center justify-center text-white font-black">J</div>
+                    <div><h4 class="text-white font-bold text-sm">Juliana L.</h4><p class="text-slate-500 text-xs">Advogada</p></div>
+                </div>
+            </div>
+
+            <div class="glass-panel p-6 rounded-3xl flex flex-col hover:border-brand-500/30 transition-colors reveal">
+                <div class="flex text-brand-400 text-xs mb-4"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                <p class="text-slate-300 text-sm italic mb-6 flex-grow leading-relaxed">"O que eu mais gosto é que ele responde o WhatsApp a qualquer hora. Se eu mudar o horário do treino e a máquina tiver ocupada, ele me passa uma adaptação na hora."</p>
+                <div class="flex items-center gap-3 pt-4 border-t border-dark-700/50">
+                    <div class="w-10 h-10 bg-dark-800 border border-dark-600 rounded-full flex items-center justify-center text-white font-black">C</div>
+                    <div><h4 class="text-white font-bold text-sm">Camila P.</h4><p class="text-slate-500 text-xs">Professora</p></div>
+                </div>
+            </div>
+
+            <div class="glass-panel p-6 rounded-3xl flex flex-col hover:border-brand-500/30 transition-colors reveal">
+                <div class="flex text-brand-400 text-xs mb-4"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                <p class="text-slate-300 text-sm italic mb-6 flex-grow leading-relaxed">"Vale cada centavo. A periodização é impecável, os treinos mudam quando precisam mudar. Ganhei tônus nas pernas e perdi a flacidez do braço que tanto me incomodava."</p>
+                <div class="flex items-center gap-3 pt-4 border-t border-dark-700/50">
+                    <div class="w-10 h-10 bg-dark-800 border border-dark-600 rounded-full flex items-center justify-center text-white font-black">B</div>
+                    <div><h4 class="text-white font-bold text-sm">Bruna M.</h4><p class="text-slate-500 text-xs">Estudante</p></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="planos" class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="text-center mb-16 reveal">
+            <h2 class="text-3xl md:text-5xl font-black text-white mb-4 tracking-tight">O passo a passo para a sua <span class="text-brand-400">evolução.</span></h2>
+            <p class="text-slate-400 text-lg">Escolha como vamos iniciar a sua mentoria hoje.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            
+            <div class="glass-panel p-8 md:p-10 rounded-[2.5rem] flex flex-col hover:border-brand-500/50 transition-colors reveal">
+                <h3 class="text-2xl font-black text-white mb-2">Mensal</h3>
+                <p class="text-slate-400 text-sm mb-6 pb-6 border-b border-dark-700/50">Para iniciar o método.</p>
+                <ul class="space-y-4 mb-8 flex-grow text-sm md:text-base text-slate-300 font-medium">
+                    <li class="flex items-center"><i class="fa-solid fa-check text-brand-400 mr-3 text-lg"></i> App e Treino Personalizado</li>
+                    <li class="flex items-center"><i class="fa-solid fa-check text-brand-400 mr-3 text-lg"></i> Suporte VIP WhatsApp</li>
+                    <li class="flex items-center"><i class="fa-solid fa-check text-brand-400 mr-3 text-lg"></i> Correção de Vídeos</li>
+                </ul>
+                <a href="https://wa.me/5544991772323?text=Oi%20tudo%20bem%20Thiago.%20Ent%C3%A3o%20eu%20vi%20teu%20site%20e%20eu%20quero%20assinar%20o%20plano%20mensal." target="_blank" class="w-full bg-dark-800 hover:bg-dark-700 text-white font-bold py-4 rounded-xl text-center transition-all flex items-center justify-center gap-2 group">
+                    <i class="fa-brands fa-whatsapp text-xl text-brand-400 group-hover:scale-110 transition-transform"></i> Assinar Plano Mensal
+                </a>
+            </div>
+
+            <div class="glass-panel p-8 md:p-10 rounded-[2.5rem] border-brand-500 relative flex flex-col shadow-[0_0_40px_rgba(59,130,246,0.15)] transform md:-translate-y-6 reveal delay-100">
+                <div class="absolute top-0 inset-x-0 bg-gradient-to-r from-brand-600 to-brand-400 text-white text-xs font-black py-1.5 text-center rounded-t-[2.5rem] uppercase tracking-widest">A Escolha Inteligente</div>
+                <h3 class="text-2xl font-black text-white mb-2 mt-4">Trimestral</h3>
+                <p class="text-slate-400 text-sm mb-6 pb-6 border-b border-dark-700/50">Comprometimento de verdade gera shape de verdade.</p>
+                <ul class="space-y-4 mb-8 flex-grow text-sm md:text-base text-slate-200 font-medium">
+                    <li class="flex items-center"><i class="fa-solid fa-check text-brand-400 mr-3 text-lg"></i> Tudo do plano mensal</li>
+                    <li class="flex items-center"><i class="fa-solid fa-check text-brand-400 mr-3 text-lg"></i> Avaliação e Progressão (KG)</li>
+                    <li class="flex items-center"><i class="fa-solid fa-check text-brand-400 mr-3 text-lg"></i> Troca Estratégica de Treino</li>
+                </ul>
+                <a href="https://wa.me/5544991772323?text=Ol%C3%A1%20tudo%20bem.%20Vi%20seu%20site%20e%20quero%20assinar%20o%20plano%20trimestral." target="_blank" class="w-full bg-brand-600 hover:bg-brand-500 text-white font-bold py-4 rounded-xl text-center transition-all flex items-center justify-center gap-2 group shadow-lg shadow-brand-500/20 active:scale-95">
+                    <i class="fa-brands fa-whatsapp text-xl group-hover:scale-110 transition-transform"></i> Assinar Plano Trimestral
+                </a>
+            </div>
+
+            <div class="glass-panel p-8 md:p-10 rounded-[2.5rem] flex flex-col hover:border-brand-500/50 transition-colors reveal delay-200">
+                <h3 class="text-2xl font-black text-white mb-2">Semestral</h3>
+                <p class="text-slate-400 text-sm mb-6 pb-6 border-b border-dark-700/50">Para transformar a base muscular por completo.</p>
+                <ul class="space-y-4 mb-8 flex-grow text-sm md:text-base text-slate-300 font-medium">
+                    <li class="flex items-center"><i class="fa-solid fa-check text-brand-400 mr-3 text-lg"></i> Tudo do Trimestral</li>
+                    <li class="flex items-center"><i class="fa-solid fa-check text-brand-400 mr-3 text-lg"></i> Periodização Absoluta</li>
+                    <li class="flex items-center"><i class="fa-solid fa-check text-brand-400 mr-3 text-lg"></i> Maior desconto na parcela</li>
+                </ul>
+                <a href="https://wa.me/5544991772323?text=Ol%C3%A1%20tudo%20bem.%20Vi%20seu%20site%20e%20quero%20assinar%20o%20plano%20semestral." target="_blank" class="w-full bg-dark-800 hover:bg-dark-700 text-white font-bold py-4 rounded-xl text-center transition-all flex items-center justify-center gap-2 group">
+                    <i class="fa-brands fa-whatsapp text-xl text-brand-400 group-hover:scale-110 transition-transform"></i> Assinar Plano Semestral
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="py-24 px-6 max-w-3xl mx-auto reveal">
+        <h2 class="text-3xl font-black text-center text-white mb-10 tracking-tight">Dúvidas <span class="text-brand-400">frequentes</span></h2>
+        
+        <div class="space-y-4">
+            <div class="glass-panel border-dark-700/50 rounded-2xl overflow-hidden hover:border-dark-600 transition-colors">
+                <button class="faq-btn w-full px-6 py-5 text-left font-bold text-white flex justify-between items-center focus:outline-none">
+                    <span class="text-lg">O treino serve se eu treinar só em casa?</span>
+                    <i class="fa-solid fa-plus text-brand-400 transition-transform duration-300 text-xl"></i>
+                </button>
+                <div class="faq-content hidden px-6 pb-5 text-slate-400 leading-relaxed border-t border-dark-800/50 pt-3">
+                    Com certeza! O seu plano é montado em cima do que você tem à disposição. Se você só tiver peso corporal e elásticos, eu vou ajustar a intensidade e a biomecânica para gerar hipertrofia na sua sala.
+                </div>
+            </div>
+
+            <div class="glass-panel border-dark-700/50 rounded-2xl overflow-hidden hover:border-dark-600 transition-colors">
+                <button class="faq-btn w-full px-6 py-5 text-left font-bold text-white flex justify-between items-center focus:outline-none">
+                    <span class="text-lg">Como o WhatsApp sem restrição ajuda no meu resultado?</span>
+                    <i class="fa-solid fa-plus text-brand-400 transition-transform duration-300 text-xl"></i>
+                </button>
+                <div class="faq-content hidden px-6 pb-5 text-slate-400 leading-relaxed border-t border-dark-800/50 pt-3">
+                    A maioria desiste porque treina errado e sente dor, ou a máquina na academia quebrou e a pessoa não sabe o que fazer. Tendo o meu WhatsApp, você manda mensagem na hora e eu já te passo um exercício substituto ou corrijo sua angulação. Treino não para.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 px-6 reveal">
+        <div class="max-w-4xl mx-auto bg-gradient-to-br from-dark-900 to-dark-950 border border-brand-500/20 rounded-[3rem] p-10 md:p-16 text-center relative overflow-hidden shadow-2xl">
+            <div class="absolute -top-24 -right-24 w-64 h-64 bg-brand-600/30 rounded-full blur-[80px]"></div>
+            <div class="absolute -bottom-24 -left-24 w-64 h-64 bg-blue-500/20 rounded-full blur-[80px]"></div>
+            
+            <div class="relative z-10">
+                <h2 class="text-3xl md:text-5xl font-black text-white mb-6 tracking-tight">O próximo nível do seu shape está a um clique.</h2>
+                <p class="text-slate-300 font-medium text-lg mb-10 max-w-xl mx-auto">
+                    Vagas super restritas devido ao alto nível de acompanhamento pelo WhatsApp. Aperte no botão e fale comigo antes que a agenda de mentorados feche.
+                </p>
+                <a href="https://wa.me/5544991772323?text=Ol%C3%A1%20tudo%20bem%20Thiago.%20Vi%20o%20seu%20site%20e%20quero%20entender%20mais%20um%20pouco%20sobre%20a%20mentoria%20e%20tudo%20isso." target="_blank" class="inline-flex items-center justify-center bg-brand-600 hover:bg-brand-500 text-white text-xl font-bold py-5 px-10 rounded-2xl shadow-[0_0_20px_rgba(59,130,246,0.3)] transition-all hover:scale-105 active:scale-95 w-full sm:w-auto">
+                    <i class="fa-brands fa-whatsapp text-2xl mr-3"></i> Falar com o Thiago Agora
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark-950 border-t border-dark-900 py-12">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-center md:text-left">
+                <h3 class="text-2xl font-black text-white tracking-tight">THIAGO<span class="text-brand-500">ROSA.</span></h3>
+                <p class="text-slate-500 text-sm mt-1">Mentoria Fitness Inteligente | CREF: 48153-G</p>
+            </div>
+            <div class="flex space-x-5">
+                <a href="https://instagram.com/othiagorosatreinador" target="_blank" class="w-12 h-12 rounded-full bg-dark-900 flex items-center justify-center text-slate-400 hover:bg-gradient-to-tr hover:from-orange-500 hover:to-purple-600 hover:text-white transition-all shadow-inner"><i class="fa-brands fa-instagram text-xl"></i></a>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 text-center mt-12 pt-6 border-t border-dark-800/50 text-slate-600 text-sm font-medium">
+            &copy; 2026 Thiago Rosa. Todos os direitos reservados. <br>
+            <span class="text-xs mt-3 block text-slate-500/50 hover:text-slate-400 transition-colors cursor-default">
+                <i class="fa-solid fa-code text-[10px] mr-1"></i> Engineered for High Conversion by <strong>Kaio Daniel</strong> | Campo Mourão, PR
+            </span>
+        </div>
+    </footer>
+
+    <script>
+        // 1. Controle do Menu Mobile (Sem bugs)
+        const btn = document.getElementById('menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const icon = document.getElementById('menu-icon');
+        const links = document.querySelectorAll('.mobile-link');
+        const nav = document.querySelector('nav');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-xmark');
+        });
+
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+                icon.classList.add('fa-bars');
+                icon.classList.remove('fa-xmark');
+            });
+        });
+
+        // Efeito de sombra na Navbar ao rolar
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                nav.classList.add('shadow-xl', 'bg-dark-950/95');
+                nav.classList.remove('bg-dark-950/60');
+            } else {
+                nav.classList.remove('shadow-xl', 'bg-dark-950/95');
+                nav.classList.add('bg-dark-950/60');
+            }
+        });
+
+        // 2. Interatividade FAQ (Abre/Fecha)
+        const faqBtns = document.querySelectorAll('.faq-btn');
+        faqBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const content = this.nextElementSibling;
+                const icon = this.querySelector('i');
+                
+                content.classList.toggle('hidden');
+                icon.classList.toggle('rotate-45'); // Transforma o + em um X suave
+                icon.classList.toggle('text-white');
+            });
+        });
+
+        // 3. Scroll Animations (Elementos surgindo na tela interativamente)
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.15 // Dispara quando 15% do elemento estiver visível
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target); // Anima só na primeira vez
+                }
+            });
+        }, observerOptions);
+
+        // Observa todos os elementos com a classe .reveal
+        document.querySelectorAll('.reveal').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
