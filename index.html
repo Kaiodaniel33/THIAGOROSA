@@ -27,6 +27,14 @@
         .glass-panel { background: rgba(15, 23, 42, 0.6); backdrop-filter: blur(12px); border: 1px solid rgba(51, 65, 85, 0.5); }
         .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.5, 0, 0, 1); }
         .reveal.active { opacity: 1; transform: translateY(0); }
+        
+        /* Força máxima nitidez nas imagens e evita embaçamento ao aplicar zoom/efeitos */
+        img {
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+            backface-visibility: hidden;
+            image-rendering: -webkit-optimize-contrast;
+        }
     </style>
 </head>
 <body class="antialiased selection:bg-brand-500 selection:text-white">
@@ -76,7 +84,7 @@
 
         <div class="md:w-1/2 text-center md:text-left z-10 reveal">
             <div class="inline-block border border-brand-500/30 bg-brand-500/10 text-brand-400 font-bold px-4 py-1.5 rounded-full text-xs md:text-sm mb-6 uppercase tracking-widest shadow-inner">
-                CREF: 48153-G | MAIS DE 12 ANOS MUDANDO CORPOS
+                CREF: 48153-G PR | MAIS DE 12 ANOS MUDANDO CORPOS
             </div>
             
             <h1 class="text-4xl sm:text-5xl md:text-6xl font-black text-white leading-tight mb-6 tracking-tight">
@@ -98,7 +106,7 @@
             <div class="relative w-full max-w-[320px] md:max-w-sm group">
                 <div class="absolute -inset-1 bg-gradient-to-r from-brand-600 to-brand-400 rounded-[2.5rem] blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
                 <div class="aspect-[4/5] bg-dark-800 rounded-[2rem] border border-dark-700 overflow-hidden relative shadow-2xl">
-                    <img src="thiagorosa.jpg" alt="Thiago Rosa Treinador" class="w-full h-full object-cover transition-all duration-700 transform group-hover:scale-105">
+                    <img src="thiagorosa.jpg" alt="Thiago Rosa Treinador" class="w-full h-full object-cover object-top transition-all duration-700 transform group-hover:scale-105">
                     <div class="absolute bottom-4 left-4 right-4 glass-panel p-3 rounded-xl backdrop-blur-md border-white/10 text-center">
                         <p class="text-white font-black text-lg">Thiago Rosa</p>
                         <p class="text-brand-400 text-xs font-bold uppercase tracking-wide">Treinador</p>
@@ -414,7 +422,7 @@
                     <i class="fa-solid fa-plus text-brand-400 transition-transform duration-300 text-xl"></i>
                 </button>
                 <div class="faq-content hidden px-6 pb-5 text-slate-400 leading-relaxed border-t border-dark-800/50 pt-3">
-                    Sim! Tenho atendimento presencial como Treinador presencial (aulas avulsas ou planos de 2x a 5x na semana). Verifique a tabela de preços na seção "Atendimento Presencial" acima e me chame no WhatsApp para agendarmos o seu horário.
+                    Sim! Tenho atendimento presencial como Treinador (aulas avulsas ou planos de 2x a 5x na semana). Verifique a tabela de preços na seção "Atendimento Presencial" acima e me chame no WhatsApp para agendarmos o seu horário.
                 </div>
             </div>
 
@@ -449,7 +457,7 @@
                     <img src="logo_thiago.png" alt="Logo Thiago Rosa" class="h-10 w-auto group-hover:scale-105 transition-transform">
                     <span class="text-2xl font-black tracking-tighter text-brand-400 uppercase drop-shadow-md">THIAGO ROSA</span>
                 </div>
-                <p class="text-slate-500 text-sm">Mentoria Fitness Inteligente | CREF: 48153-G</p>
+                <p class="text-slate-500 text-sm">Mentoria Fitness Inteligente | CREF: 48153-G PR</p>
             </div>
 
             <div class="flex space-x-5 mt-6 md:mt-0">
@@ -467,7 +475,6 @@
     </a>
 
     <script>
-        // Menu Mobile
         const btn = document.getElementById('menu-btn');
         const menu = document.getElementById('mobile-menu');
         const icon = document.getElementById('menu-icon');
@@ -486,7 +493,6 @@
             });
         });
 
-        // Interatividade FAQ
         const faqBtns = document.querySelectorAll('.faq-btn');
         faqBtns.forEach(btn => {
             btn.addEventListener('click', function() {
@@ -495,7 +501,6 @@
             });
         });
 
-        // Scroll Animations (Interativo)
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
