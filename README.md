@@ -147,7 +147,7 @@ git clone [url-do-repositorio]
 * **Arquitetura e Interface:** Kaio Daniel
 * **Localidade Operacional:** Campo Mourão — Paraná, Brasil
 * **LinkedIn:**
-  [LinkedIn de Kaio Daniel](www.linkedin.com/in/kaio-daniel-de-souza-da-costa)
+  LinkedIn: www.linkedin.com/in/kaio-daniel-de-souza-da-costa
 
 ---
 
