@@ -1,0 +1,108 @@
+/* ==========================================================================
+   CONFIGURAÇÕES GERAIS E COMPORTAMENTO DE TELA
+   ========================================================================== */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Customização Premium da Barra de Rolagem (Scrollbar) */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #020617; /* dark-950 */
+}
+::-webkit-scrollbar-thumb {
+    background: #1e293b; /* dark-800 */
+    border-radius: 5px;
+    border: 2px solid #020617;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #f59e0b; /* brand-500 */
+}
+
+/* Força nitidez máxima e impede distorções em transições de imagem */
+img {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    image-rendering: -webkit-optimize-contrast;
+}
+
+/* ==========================================================================
+   EFEITOS VISUAIS PREMIUM (GLASSMORPHISM & GLOW)
+   ========================================================================== */
+
+/* Efeito Vidro Translúcido Profissional */
+.glass-panel {
+    background: rgba(15, 23, 42, 0.55);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(51, 65, 85, 0.35);
+}
+
+/* Brilho Neon Sutil em Textos de Destaque */
+.text-glow {
+    text-shadow: 0 0 25px rgba(245, 158, 11, 0.45);
+}
+
+/* Moldura Iluminada para a Foto de Perfil Principal */
+.image-glow {
+    box-shadow: 0 20px 40px -15px rgba(245, 158, 11, 0.15);
+    transition: box-shadow 0.5s ease;
+}
+.image-glow:hover {
+    box-shadow: 0 25px 50px -10px rgba(245, 158, 11, 0.3);
+}
+
+/* Animação de Elevação e Brilho das Bordas nos Cards */
+.hover-lift {
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+                box-shadow 0.4s ease, 
+                border-color 0.4s ease;
+}
+.hover-lift:hover {
+    transform: translateY(-6px);
+    border-color: rgba(245, 158, 11, 0.4);
+    box-shadow: 0 20px 30px -10px rgba(2, 6, 23, 0.7), 
+                0 0 20px 0 rgba(245, 158, 11, 0.05);
+}
+
+/* Estilização para o Item Ativo do FAQ */
+.faq-item {
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+.faq-item:hover {
+    border-color: rgba(245, 158, 11, 0.25);
+}
+
+/* ==========================================================================
+   SISTEMA DE ANIMAÇÕES AUTOMÁTICAS (KEYFRAMES & REVEAL)
+   ========================================================================== */
+
+/* Efeito de Revelação Gradual ao Rolar a Página (Scroll Reveal) */
+.reveal {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), 
+                transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Pulsação de Fundo Orgânica para Luz de Ambiente Ambar do Cabeçalho */
+@keyframes ambientGlow {
+    0%, 100% {
+        transform: scale(1) translate(0px, 0px);
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(1.08) translate(10px, -15px);
+        opacity: 1;
+    }
+}
+.animate-ambient-pulse {
+    animation: ambientGlow 8s ease-in-out infinite;
+}
