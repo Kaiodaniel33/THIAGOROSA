@@ -4,9 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thiago Rosa | Mentoria Fitness de Alta Performance</title>
+    
     <script src="https://cdn.tailwindcss.com"></script>
+    
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="styles.css">
     
     <script>
         tailwind.config = {
@@ -21,48 +25,33 @@
             }
         }
     </script>
-    <style>
-        body { background-color: #020617; color: #f8fafc; overflow-x: hidden; }
-        .text-glow { text-shadow: 0 0 20px rgba(245, 158, 11, 0.5); }
-        .glass-panel { background: rgba(15, 23, 42, 0.6); backdrop-filter: blur(12px); border: 1px solid rgba(51, 65, 85, 0.5); }
-        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.5, 0, 0, 1); }
-        .reveal.active { opacity: 1; transform: translateY(0); }
-        
-        /* Força máxima nitidez nas imagens e evita embaçamento ao aplicar zoom/efeitos */
-        img {
-            -webkit-transform: translateZ(0);
-            transform: translateZ(0);
-            backface-visibility: hidden;
-            image-rendering: -webkit-optimize-contrast;
-        }
-    </style>
 </head>
-<body class="antialiased selection:bg-brand-500 selection:text-white">
+<body class="antialiased selection:bg-brand-500 selection:text-white bg-dark-950 text-slate-100">
 
     <nav class="fixed w-full glass-panel z-50 border-b border-dark-800 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center relative">
             
             <a href="#" class="z-20 flex items-center gap-3 group">
-                <img src="logo_thiago.png" alt="Logo Thiago Rosa" class="h-10 md:h-12 w-auto group-hover:scale-105 transition-transform">
+                <img src="assets/img/logo_thiago.png" alt="Logo Thiago Rosa" class="h-10 md:h-12 w-auto group-hover:scale-105 transition-transform duration-300">
                 <span class="text-xl md:text-2xl font-black tracking-tighter text-brand-400 uppercase drop-shadow-lg">THIAGO ROSA</span>
             </a>
 
             <div class="hidden lg:flex space-x-8 text-sm font-semibold text-slate-300">
-                <a href="#metodo" class="hover:text-white transition-colors">O Método</a>
-                <a href="#evolucao" class="hover:text-white transition-colors">Prática</a>
-                <a href="#depoimentos" class="hover:text-white transition-colors">Resultados</a>
-                <a href="#planos-presencial" class="hover:text-white transition-colors">Presencial</a>
-                <a href="#planos-online" class="hover:text-white transition-colors">Online</a>
+                <a href="#metodo" class="hover:text-white transition-colors duration-200">O Método</a>
+                <a href="#evolucao" class="hover:text-white transition-colors duration-200">Prática</a>
+                <a href="#depoimentos" class="hover:text-white transition-colors duration-200">Resultados</a>
+                <a href="#planos-presencial" class="hover:text-white transition-colors duration-200">Presencial</a>
+                <a href="#planos-online" class="hover:text-white transition-colors duration-200">Online</a>
             </div>
 
             <div class="hidden lg:flex items-center space-x-4">
-                <a href="https://instagram.com/othiagorosatreinador" target="_blank" class="text-slate-400 hover:text-brand-500 text-xl transition-colors"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://wa.me/5569981499387?text=Ol%C3%A1%20tudo%20bem%20Thiago.%20Vi%20o%20seu%20site%20e%20quero%20entender%20mais%20sobre%20a%20mentoria." target="_blank" class="bg-brand-600 hover:bg-brand-500 text-white px-6 py-2.5 rounded-lg font-bold transition-all shadow-lg hover:shadow-brand-500/40 hover:-translate-y-0.5">
+                <a href="https://instagram.com/othiagorosatreinador" target="_blank" class="text-slate-400 hover:text-brand-500 text-xl transition-colors duration-200"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://wa.me/5569981499387?text=Ol%C3%A1%20tudo%20bem%20Thiago.%20Vi%20o%20seu%20site%20e%20quero%20entender%20mais%20sobre%20a%20mentoria." target="_blank" class="bg-brand-600 hover:bg-brand-500 text-white px-6 py-2.5 rounded-lg font-bold transition-all shadow-lg hover:shadow-brand-500/40 hover:-translate-y-0.5 duration-300">
                     Falar com Thiago
                 </a>
             </div>
 
-            <button id="menu-btn" class="lg:hidden text-slate-300 text-3xl focus:outline-none z-20">
+            <button id="menu-btn" class="lg:hidden text-slate-300 text-3xl focus:outline-none z-20 transition-transform duration-300">
                 <i class="fa-solid fa-bars" id="menu-icon"></i>
             </button>
         </div>
@@ -80,7 +69,7 @@
     </nav>
 
     <header class="relative pt-32 pb-16 px-6 md:pt-40 md:pb-24 flex flex-col md:flex-row items-center max-w-7xl mx-auto overflow-hidden">
-        <div class="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-brand-600/20 rounded-full blur-[120px] -z-10 animate-pulse"></div>
+        <div class="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-brand-600/10 rounded-full blur-[120px] -z-10 animate-ambient-pulse"></div>
 
         <div class="md:w-1/2 text-center md:text-left z-10 reveal">
             <div class="inline-block border border-brand-500/30 bg-brand-500/10 text-brand-400 font-bold px-4 py-1.5 rounded-full text-xs md:text-sm mb-6 uppercase tracking-widest shadow-inner">
@@ -96,8 +85,8 @@
             </p>
             
             <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start mb-10">
-                <a href="https://wa.me/5569981499387?text=Ol%C3%A1%20Thiago.%20Quero%20iniciar%20minha%20transforma%C3%A7%C3%A3o!" target="_blank" class="bg-brand-600 hover:bg-brand-500 text-white text-lg font-bold py-4 px-8 rounded-xl shadow-[0_0_25px_rgba(245,158,11,0.5)] transition-all hover:scale-105 flex items-center justify-center group">
-                    <i class="fa-brands fa-whatsapp text-2xl mr-3 group-hover:rotate-12 transition-transform"></i> Iniciar Transformação
+                <a href="https://wa.me/5569981499387?text=Ol%C3%A1%20Thiago.%20Quero%20iniciar%20minha%20transforma%C3%A7%C3%A3o!" target="_blank" class="bg-brand-600 hover:bg-brand-500 text-white text-lg font-bold py-4 px-8 rounded-xl shadow-[0_0_25px_rgba(245,158,11,0.4)] transition-all hover:scale-105 flex items-center justify-center group duration-300">
+                    <i class="fa-brands fa-whatsapp text-2xl mr-3 group-hover:rotate-12 transition-transform duration-200"></i> Iniciar Transformação
                 </a>
             </div>
         </div>
@@ -105,8 +94,8 @@
         <div class="md:w-1/2 mt-10 md:mt-0 flex flex-col items-center z-10 reveal gap-6">
             <div class="relative w-full max-w-[320px] md:max-w-sm group">
                 <div class="absolute -inset-1 bg-gradient-to-r from-brand-600 to-brand-400 rounded-[2.5rem] blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
-                <div class="aspect-[4/5] bg-dark-800 rounded-[2rem] border border-dark-700 overflow-hidden relative shadow-2xl flex items-center justify-center">
-                    <img src="thiagorosa.jpg" alt="Thiago Rosa Treinador" class="w-full h-auto transition-all duration-700 transform group-hover:scale-105">
+                <div class="aspect-[4/5] bg-dark-800 rounded-[2rem] border border-dark-700 overflow-hidden relative shadow-2xl flex items-center justify-center image-glow">
+                    <img src="assets/img/thiagorosa.jpg" alt="Thiago Rosa Treinador" class="w-full h-auto transition-all duration-700 transform group-hover:scale-105">
                     <div class="absolute bottom-4 left-4 right-4 glass-panel p-3 rounded-xl backdrop-blur-md border-white/10 text-center">
                         <p class="text-white font-black text-lg">Thiago Rosa</p>
                         <p class="text-brand-400 text-xs font-bold uppercase tracking-wide">Treinador</p>
@@ -135,39 +124,39 @@
         </div>
         
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div class="glass-panel p-8 rounded-3xl hover:-translate-y-2 transition-all duration-300 group">
-                <i class="fa-solid fa-mobile-screen text-3xl text-brand-400 mb-6 group-hover:scale-110 transition-transform"></i>
+            <div class="glass-panel p-8 rounded-3xl hover-lift group">
+                <i class="fa-solid fa-mobile-screen text-3xl text-brand-400 mb-6 group-hover:scale-110 transition-transform duration-300"></i>
                 <h3 class="text-xl font-bold text-white mb-3 tracking-wide">Aplicativo Exclusivo</h3>
                 <p class="text-slate-400 text-sm leading-relaxed">Tenha seu treino, histórico de cargas e periodização direto no celular, com uma interface absurda de fácil.</p>
             </div>
             
-            <div class="glass-panel p-8 rounded-3xl border-brand-500/30 hover:border-brand-500 hover:-translate-y-2 transition-all duration-300 group relative overflow-hidden">
-                <div class="absolute top-0 right-0 bg-brand-600 text-white text-[10px] font-bold px-4 py-1.5 rounded-bl-xl uppercase">Acesso VIP</div>
-                <i class="fa-brands fa-whatsapp text-3xl text-brand-400 mb-6 group-hover:scale-110 transition-transform"></i>
+            <div class="glass-panel p-8 rounded-3xl border-brand-500/30 hover:border-brand-500/60 hover-lift group relative overflow-hidden">
+                <div class="absolute top-0 right-0 bg-brand-600 text-white text-[10px] font-bold px-4 py-1.5 rounded-bl-xl uppercase tracking-wider">Acesso VIP</div>
+                <i class="fa-brands fa-whatsapp text-3xl text-brand-400 mb-6 group-hover:scale-110 transition-transform duration-300"></i>
                 <h3 class="text-xl font-bold text-white mb-3 tracking-wide">WhatsApp Sem Restrição</h3>
                 <p class="text-slate-400 text-sm leading-relaxed">Dúvida sobre o peso? Me manda mensagem na hora do treino e eu te ajusto na mesma hora.</p>
             </div>
 
-            <div class="glass-panel p-8 rounded-3xl hover:-translate-y-2 transition-all duration-300 group">
-                <i class="fa-solid fa-person-chalkboard text-3xl text-brand-400 mb-6 group-hover:scale-110 transition-transform"></i>
+            <div class="glass-panel p-8 rounded-3xl hover-lift group">
+                <i class="fa-solid fa-person-chalkboard text-3xl text-brand-400 mb-6 group-hover:scale-110 transition-transform duration-300"></i>
                 <h3 class="text-xl font-bold text-white mb-3 tracking-wide">Vídeos Autorais</h3>
                 <p class="text-slate-400 text-sm leading-relaxed">Nada de banco de imagens genérico. Eu mesmo gravo a execução perfeita para te mostrar onde o músculo deve fritar.</p>
             </div>
 
-            <div class="glass-panel p-8 rounded-3xl hover:-translate-y-2 transition-all duration-300 group">
-                <i class="fa-solid fa-bolt text-3xl text-brand-400 mb-6 group-hover:scale-110 transition-transform"></i>
+            <div class="glass-panel p-8 rounded-3xl hover-lift group">
+                <i class="fa-solid fa-bolt text-3xl text-brand-400 mb-6 group-hover:scale-110 transition-transform duration-300"></i>
                 <h3 class="text-xl font-bold text-white mb-3 tracking-wide">Métodos Avançados</h3>
                 <p class="text-slate-400 text-sm leading-relaxed">Drop-set, Rest-Pause e FST-7 baseados no seu nível para estourar qualquer platô de resultados.</p>
             </div>
 
-            <div class="glass-panel p-8 rounded-3xl hover:-translate-y-2 transition-all duration-300 group">
-                <i class="fa-solid fa-video text-3xl text-brand-400 mb-6 group-hover:scale-110 transition-transform"></i>
+            <div class="glass-panel p-8 rounded-3xl hover-lift group">
+                <i class="fa-solid fa-video text-3xl text-brand-400 mb-6 group-hover:scale-110 transition-transform duration-300"></i>
                 <h3 class="text-xl font-bold text-white mb-3 tracking-wide">Correção em Tempo Real</h3>
                 <p class="text-slate-400 text-sm leading-relaxed">Filmou sua série? Me manda. Eu analiso o seu ângulo e te corrijo para você nunca se lesionar e pegar muito mais peso.</p>
             </div>
 
-            <div class="glass-panel p-8 rounded-3xl hover:-translate-y-2 transition-all duration-300 group">
-                <i class="fa-solid fa-arrow-up-right-dots text-3xl text-brand-400 mb-6 group-hover:scale-110 transition-transform"></i>
+            <div class="glass-panel p-8 rounded-3xl hover-lift group">
+                <i class="fa-solid fa-arrow-up-right-dots text-3xl text-brand-400 mb-6 group-hover:scale-110 transition-transform duration-300"></i>
                 <h3 class="text-xl font-bold text-white mb-3 tracking-wide">Controle de Carga (KG)</h3>
                 <p class="text-slate-400 text-sm leading-relaxed">Fazemos a progressão matemática da sua força semanalmente. É assim que o músculo entende que precisa crescer.</p>
             </div>
@@ -182,170 +171,128 @@
         
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             
-            <div class="glass-panel p-4 rounded-[2rem] hover:border-brand-500/50 transition-colors group h-full flex flex-col">
+            <div class="glass-panel p-4 rounded-[2rem] hover:border-brand-500/40 transition-all duration-300 group h-full flex flex-col">
                 <div class="w-full rounded-xl overflow-hidden bg-dark-800 relative shadow-2xl flex-grow flex items-center justify-center">
-                    <img src="competicao_thiago.jpg" alt="Thiago Rosa Competição" class="w-full h-auto group-hover:scale-105 transition-transform duration-700">
+                    <img src="assets/img/competicao_thiago.jpg" alt="Thiago Rosa Competição" class="w-full h-auto group-hover:scale-105 transition-transform duration-700">
                     <div class="absolute bottom-3 left-3 right-3 bg-dark-950/80 backdrop-blur-md px-4 py-2 rounded-lg border border-dark-700">
                         <p class="text-white font-bold text-xs"><i class="fa-solid fa-trophy text-brand-400 mr-1"></i> Shape de Competição</p>
                     </div>
                 </div>
             </div>
 
-            <div class="glass-panel p-4 rounded-[2rem] hover:border-brand-500/50 transition-colors group h-full flex flex-col">
+            <div class="glass-panel p-4 rounded-[2rem] hover:border-brand-500/40 transition-all duration-300 group h-full flex flex-col">
                 <div class="w-full rounded-xl overflow-hidden bg-dark-800 relative shadow-2xl flex-grow flex items-center justify-center">
-                    <img src="projeto_aluno.jpg" alt="Evolução Aluno" class="w-full h-auto group-hover:scale-105 transition-transform duration-700">
+                    <img src="assets/img/projeto_aluno.jpg" alt="Evolução Aluno" class="w-full h-auto group-hover:scale-105 transition-transform duration-700">
                     <div class="absolute bottom-3 left-3 right-3 bg-dark-950/80 backdrop-blur-md px-4 py-2 rounded-lg border border-dark-700">
                         <p class="text-white font-bold text-xs"><i class="fa-solid fa-fire text-brand-400 mr-1"></i> Projeto Mentorado</p>
                     </div>
                 </div>
             </div>
 
-            <div class="glass-panel p-4 rounded-[2rem] hover:border-brand-500/50 transition-colors group h-full flex flex-col">
+            <div class="glass-panel p-4 rounded-[2rem] hover:border-brand-500/40 transition-all duration-300 group h-full flex flex-col">
                 <div class="w-full rounded-xl overflow-hidden bg-dark-800 relative shadow-2xl flex-grow flex items-center justify-center">
-                    <img src="thiagometa.jpeg" alt="Evolução Pessoal Thiago Rosa" class="w-full h-auto group-hover:scale-105 transition-transform duration-700">
+                    <img src="assets/img/thiagometa.jpeg" alt="Evolução Pessoal Thiago Rosa" class="w-full h-auto group-hover:scale-105 transition-transform duration-700">
                     <div class="absolute bottom-3 left-3 right-3 bg-dark-950/80 backdrop-blur-md px-4 py-2 rounded-lg border border-dark-700">
                         <p class="text-white font-bold text-xs"><i class="fa-solid fa-trophy text-brand-400 mr-1"></i> Evolução do Treinador</p>
                     </div>
                 </div>
             </div>
 
-            <div class="glass-panel p-4 rounded-[2rem] hover:border-brand-500/50 transition-colors group h-full flex flex-col">
+            <div class="glass-panel p-4 rounded-[2rem] hover:border-brand-500/40 transition-all duration-300 group h-full flex flex-col">
                 <div class="w-full rounded-xl overflow-hidden bg-dark-800 relative shadow-2xl flex-grow flex items-center justify-center">
-                    <img src="alunothiago.jpeg" alt="Evolução Aluno Mentoria" class="w-full h-auto group-hover:scale-105 transition-transform duration-700">
+                    <img src="assets/img/alunothiago.jpeg" alt="Evolução Aluno Mentoria" class="w-full h-auto group-hover:scale-105 transition-transform duration-700">
                     <div class="absolute bottom-3 left-3 right-3 bg-dark-950/80 backdrop-blur-md px-4 py-2 rounded-lg border border-dark-700">
                         <p class="text-white font-bold text-xs"><i class="fa-solid fa-fire text-brand-400 mr-1"></i> Evolução Mentorado</p>
                     </div>
                 </div>
             </div>
 
-            <div class="glass-panel p-4 rounded-[2rem] hover:border-brand-500/50 transition-colors group h-full flex flex-col">
+            <div class="glass-panel p-4 rounded-[2rem] hover:border-brand-500/40 transition-all duration-300 group h-full flex flex-col">
                 <div class="w-full rounded-xl overflow-hidden bg-dark-800 relative shadow-2xl flex-grow flex items-center justify-center">
-                    <img src="antesedepoisaluna.jpeg" alt="Evolução Aluna 60 dias" class="w-full h-auto group-hover:scale-105 transition-transform duration-700">
+                    <img src="assets/img/antesedepoisaluna.jpeg" alt="Evolução Aluna 60 dias" class="w-full h-auto group-hover:scale-105 transition-transform duration-700">
                     <div class="absolute bottom-3 left-3 right-3 bg-dark-950/80 backdrop-blur-md px-4 py-2 rounded-lg border border-dark-700">
                         <p class="text-white font-bold text-xs"><i class="fa-solid fa-bolt text-brand-400 mr-1"></i> 60 Dias de Foco</p>
                     </div>
                 </div>
             </div>
 
-            <div class="glass-panel p-4 rounded-[2rem] hover:border-brand-500/50 transition-colors group h-full flex flex-col">
+            <div class="glass-panel p-4 rounded-[2rem] hover:border-brand-500/40 transition-all duration-300 group h-full flex flex-col">
                 <div class="w-full rounded-xl overflow-hidden bg-dark-800 relative shadow-2xl flex-grow flex items-center justify-center">
-                    <img src="antesedepoisoutraaluna.jpeg" alt="Evolução Aluna Hipertrofia" class="w-full h-auto group-hover:scale-105 transition-transform duration-700">
+                    <img src="assets/img/antesedepoisoutraaluna.jpeg" alt="Evolução Aluna Hipertrofia" class="w-full h-auto group-hover:scale-105 transition-transform duration-700">
                     <div class="absolute bottom-3 left-3 right-3 bg-dark-950/80 backdrop-blur-md px-4 py-2 rounded-lg border border-dark-700">
                         <p class="text-white font-bold text-xs"><i class="fa-solid fa-arrow-trend-up text-brand-400 mr-1"></i> Definição & Tônus</p>
                     </div>
                 </div>
             </div>
             
-            <div class="glass-panel p-4 rounded-[2rem] hover:border-brand-500/50 transition-colors group h-full flex flex-col">
+            <div class="glass-panel p-4 rounded-[2rem] hover:border-brand-500/40 transition-all duration-300 group h-full flex flex-col">
                 <div class="w-full rounded-xl overflow-hidden bg-dark-800 relative shadow-2xl flex-grow flex items-center justify-center">
-                    <img src="mentoradoganhandopremio.jpg" alt="Mentorado Campeão" class="w-full h-auto group-hover:scale-105 transition-transform duration-700">
+                    <img src="assets/img/mentoradoganhandopremio.jpg" alt="Mentorado Campeão" class="w-full h-auto group-hover:scale-105 transition-transform duration-700">
                     <div class="absolute bottom-3 left-3 right-3 bg-dark-950/80 backdrop-blur-md px-4 py-2 rounded-lg border border-dark-700">
                         <p class="text-white font-bold text-xs"><i class="fa-solid fa-medal text-brand-400 mr-1"></i> Mentorado Campeão</p>
                     </div>
                 </div>
             </div>
 
-            <div class="glass-panel p-4 rounded-[2rem] hover:border-brand-500/50 transition-colors group h-full flex flex-col">
+            <div class="glass-panel p-4 rounded-[2rem] hover:border-brand-500/40 transition-all duration-300 group h-full flex flex-col">
                 <div class="w-full rounded-xl overflow-hidden bg-dark-800 relative shadow-2xl flex-grow flex items-center justify-center">
-                    <img src="aluna1.jpg" alt="Evolução Aluna 1" class="w-full h-auto group-hover:scale-105 transition-transform duration-700">
+                    <img src="assets/img/aluna1.jpg" alt="Evolução Aluna 1" class="w-full h-auto group-hover:scale-105 transition-transform duration-700">
                     <div class="absolute bottom-3 left-3 right-3 bg-dark-950/80 backdrop-blur-md px-4 py-2 rounded-lg border border-dark-700">
                         <p class="text-white font-bold text-xs"><i class="fa-solid fa-star text-brand-400 mr-1"></i> Seca Rápida</p>
                     </div>
                 </div>
             </div>
 
-            <div class="glass-panel p-4 rounded-[2rem] hover:border-brand-500/50 transition-colors group h-full flex flex-col">
+            <div class="glass-panel p-4 rounded-[2rem] hover:border-brand-500/40 transition-all duration-300 group h-full flex flex-col">
                 <div class="w-full rounded-xl overflow-hidden bg-dark-800 relative shadow-2xl flex-grow flex items-center justify-center">
-                    <img src="aluna2.jpg" alt="Evolução Aluna 2" class="w-full h-auto group-hover:scale-105 transition-transform duration-700">
+                    <img src="assets/img/aluna2.jpg" alt="Evolução Aluna 2" class="w-full h-auto group-hover:scale-105 transition-transform duration-700">
                     <div class="absolute bottom-3 left-3 right-3 bg-dark-950/80 backdrop-blur-md px-4 py-2 rounded-lg border border-dark-700">
                         <p class="text-white font-bold text-xs"><i class="fa-solid fa-dumbbell text-brand-400 mr-1"></i> Ganho de Força</p>
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
 
-    <section id="depoimentos" class="py-24 bg-dark-900/60 border-y border-dark-800 relative reveal">
+    <section id="depoimentos" class="py-24 bg-dark-900/40 border-y border-dark-800 relative reveal">
         <div class="max-w-7xl mx-auto px-6 mb-16 text-center">
             <h2 class="text-3xl md:text-5xl font-black text-white tracking-tight uppercase">Quem usa, <span class="text-brand-400">recomenda.</span></h2>
             <p class="text-slate-400 mt-4 text-lg">Resultados visíveis e comprovados.</p>
         </div>
 
         <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            
-            <div class="glass-panel p-6 rounded-3xl flex flex-col hover:border-brand-500/30 transition-colors">
+            <div class="glass-panel p-6 rounded-3xl flex flex-col hover:border-brand-500/30 transition-colors duration-300">
                 <div class="flex text-brand-400 text-xs mb-4"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
                 <p class="text-slate-300 text-sm italic mb-6 flex-grow leading-relaxed">"O ajuste de carga do Thiago mudou tudo. Saí de um platô de 8 meses e comecei a ver hipertrofia real nos ombros e costas."</p>
-                <div class="flex items-center gap-3 pt-4 border-t border-dark-700/50">
-                    <div class="w-10 h-10 bg-dark-800 rounded-full flex items-center justify-center text-white font-black">H</div>
+                <div class="flex items-center gap-3 pt-4 border-t border-dark-800">
+                    <div class="w-10 h-10 bg-dark-800 rounded-full flex items-center justify-center text-white font-black shadow-inner">H</div>
                     <div><h4 class="text-white font-bold text-sm">Henrique D.</h4><p class="text-slate-500 text-xs">Empresário</p></div>
                 </div>
             </div>
-
-            <div class="glass-panel p-6 rounded-3xl flex flex-col hover:border-brand-500/30 transition-colors">
+            <div class="glass-panel p-6 rounded-3xl flex flex-col hover:border-brand-500/30 transition-colors duration-300">
                 <div class="flex text-brand-400 text-xs mb-4"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
                 <p class="text-slate-300 text-sm italic mb-6 flex-grow leading-relaxed">"Treinava fofo e nem sabia. O aplicativo é muito fácil de usar e ter o WhatsApp dele para tirar dúvida me dá muita segurança."</p>
-                <div class="flex items-center gap-3 pt-4 border-t border-dark-700/50">
-                    <div class="w-10 h-10 bg-dark-800 rounded-full flex items-center justify-center text-white font-black">A</div>
+                <div class="flex items-center gap-3 pt-4 border-t border-dark-800">
+                    <div class="w-10 h-10 bg-dark-800 rounded-full flex items-center justify-center text-white font-black shadow-inner">A</div>
                     <div><h4 class="text-white font-bold text-sm">Amanda C.</h4><p class="text-slate-500 text-xs">Arquiteta</p></div>
                 </div>
             </div>
-
-            <div class="glass-panel p-6 rounded-3xl flex flex-col hover:border-brand-500/30 transition-colors">
+            <div class="glass-panel p-6 rounded-3xl flex flex-col hover:border-brand-500/30 transition-colors duration-300">
                 <div class="flex text-brand-400 text-xs mb-4"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
                 <p class="text-slate-300 text-sm italic mb-6 flex-grow leading-relaxed">"Sempre fui o cara magro treinando sem ficha. Em 3 meses de mentoria meu peitoral e braço mudaram de formato."</p>
-                <div class="flex items-center gap-3 pt-4 border-t border-dark-700/50">
-                    <div class="w-10 h-10 bg-dark-800 rounded-full flex items-center justify-center text-white font-black">R</div>
+                <div class="flex items-center gap-3 pt-4 border-t border-dark-800">
+                    <div class="w-10 h-10 bg-dark-800 rounded-full flex items-center justify-center text-white font-black shadow-inner">R</div>
                     <div><h4 class="text-white font-bold text-sm">Rafael T.</h4><p class="text-slate-500 text-xs">Desenvolvedor</p></div>
                 </div>
             </div>
-
-            <div class="glass-panel p-6 rounded-3xl flex flex-col hover:border-brand-500/30 transition-colors">
+            <div class="glass-panel p-6 rounded-3xl flex flex-col hover:border-brand-500/30 transition-colors duration-300">
                 <div class="flex text-brand-400 text-xs mb-4"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
                 <p class="text-slate-300 text-sm italic mb-6 flex-grow leading-relaxed">"Os vídeos dele executando os exercícios matam qualquer dúvida. Nada de foto estática do Google. É ele lá, mostrando onde deve queimar."</p>
-                <div class="flex items-center gap-3 pt-4 border-t border-dark-700/50">
-                    <div class="w-10 h-10 bg-dark-800 rounded-full flex items-center justify-center text-white font-black">L</div>
+                <div class="flex items-center gap-3 pt-4 border-t border-dark-800">
+                    <div class="w-10 h-10 bg-dark-800 rounded-full flex items-center justify-center text-white font-black shadow-inner">L</div>
                     <div><h4 class="text-white font-bold text-sm">Letícia P.</h4><p class="text-slate-500 text-xs">Médica</p></div>
                 </div>
             </div>
-
-            <div class="glass-panel p-6 rounded-3xl flex flex-col hover:border-brand-500/30 transition-colors">
-                <div class="flex text-brand-400 text-xs mb-4"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                <p class="text-slate-300 text-sm italic mb-6 flex-grow leading-relaxed">"Meu glúteo nunca desenvolvia. O Thiago viu um vídeo meu fazendo Stiff, ajustou a minha lombar e no dia seguinte a dor foi embora."</p>
-                <div class="flex items-center gap-3 pt-4 border-t border-dark-700/50">
-                    <div class="w-10 h-10 bg-dark-800 rounded-full flex items-center justify-center text-white font-black">A</div>
-                    <div><h4 class="text-white font-bold text-sm">Amanda F.</h4><p class="text-slate-500 text-xs">Arquiteta</p></div>
-                </div>
-            </div>
-
-            <div class="glass-panel p-6 rounded-3xl flex flex-col hover:border-brand-500/30 transition-colors">
-                <div class="flex text-brand-400 text-xs mb-4"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                <p class="text-slate-300 text-sm italic mb-6 flex-grow leading-relaxed">"Mentoria impecável. A periodização é estruturada e você percebe que tem ciência por trás de cada série que ele passa no App."</p>
-                <div class="flex items-center gap-3 pt-4 border-t border-dark-700/50">
-                    <div class="w-10 h-10 bg-dark-800 rounded-full flex items-center justify-center text-white font-black">J</div>
-                    <div><h4 class="text-white font-bold text-sm">Juliana T.</h4><p class="text-slate-500 text-xs">Nutricionista</p></div>
-                </div>
-            </div>
-
-            <div class="glass-panel p-6 rounded-3xl flex flex-col hover:border-brand-500/30 transition-colors">
-                <div class="flex text-brand-400 text-xs mb-4"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                <p class="text-slate-300 text-sm italic mb-6 flex-grow leading-relaxed">"O que eu mais gosto é que ele responde a qualquer hora. Se eu mudar o horário do treino, ele passa uma adaptação na hora."</p>
-                <div class="flex items-center gap-3 pt-4 border-t border-dark-700/50">
-                    <div class="w-10 h-10 bg-dark-800 rounded-full flex items-center justify-center text-white font-black">C</div>
-                    <div><h4 class="text-white font-bold text-sm">Camila P.</h4><p class="text-slate-500 text-xs">Professora</p></div>
-                </div>
-            </div>
-
-            <div class="glass-panel p-6 rounded-3xl flex flex-col hover:border-brand-500/30 transition-colors">
-                <div class="flex text-brand-400 text-xs mb-4"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                <p class="text-slate-300 text-sm italic mb-6 flex-grow leading-relaxed">"Treinar com o método certo mudou o jogo. Sequei 6kg de gordura focando no treino de força e ganhei muita massa magra."</p>
-                <div class="flex items-center gap-3 pt-4 border-t border-dark-700/50">
-                    <div class="w-10 h-10 bg-dark-800 rounded-full flex items-center justify-center text-white font-black">J</div>
-                    <div><h4 class="text-white font-bold text-sm">Juliana L.</h4><p class="text-slate-500 text-xs">Advogada</p></div>
-                </div>
-            </div>
-
         </div>
     </section>
 
@@ -356,37 +303,36 @@
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
-            
             <div class="glass-panel p-4 rounded-[2rem] reveal group shadow-2xl">
-                <img src="planos.PNG" alt="Tabela de Preços Atendimento Presencial" class="w-full h-auto rounded-xl object-contain group-hover:scale-[1.02] transition-transform duration-500">
+                <img src="assets/img/planos.PNG" alt="Tabela de Preços Atendimento Presencial" class="w-full h-auto rounded-xl object-contain group-hover:scale-[1.01] transition-transform duration-500">
             </div>
 
             <div class="space-y-4 reveal">
                 <h3 class="text-2xl font-bold text-white mb-6 uppercase tracking-wider border-b border-dark-700 pb-2">Agende seu plano</h3>
                 
-                <a href="https://wa.me/5544991772323?text=Ol%C3%A1%20Thiago!%20Vi%20a%20tabela%20no%20site%20e%20gostaria%20de%20agendar%20uma%20AULA%20AVULSA." target="_blank" class="w-full glass-panel hover:bg-brand-600 hover:border-brand-500 text-white font-bold py-4 px-6 rounded-xl flex justify-between items-center transition-all group">
+                <a href="https://wa.me/5544991772323?text=Ol%C3%A1%20Thiago!%20Vi%20a%20tabela%20no%20site%20e%20gostaria%20de%20agendar%20uma%20AULA%20AVULSA." target="_blank" class="w-full glass-panel hover:bg-brand-600 hover:border-brand-500 text-white font-bold py-4 px-6 rounded-xl flex justify-between items-center transition-all group duration-200">
                     <span>Aula Avulsa</span>
-                    <span class="flex items-center gap-2"><i class="fa-brands fa-whatsapp text-brand-400 group-hover:text-white transition-colors text-xl"></i></span>
+                    <span class="flex items-center gap-2"><i class="fa-brands fa-whatsapp text-brand-400 group-hover:text-white text-xl"></i></span>
                 </a>
 
-                <a href="https://wa.me/5544991772323?text=Ol%C3%A1%20Thiago!%20Vi%20a%20tabela%20no%20site%20e%20gostaria%20de%20assinar%20o%20plano%20PRESENCIAL%20de%202X%20NA%20SEMANA." target="_blank" class="w-full glass-panel hover:bg-brand-600 hover:border-brand-500 text-white font-bold py-4 px-6 rounded-xl flex justify-between items-center transition-all group">
+                <a href="https://wa.me/5544991772323?text=Ol%C3%A1%20Thiago!%20Vi%20a%20tabela%20no%20site%20e%20gostaria%20de%20assinar%20o%20plano%20PRESENCIAL%20de%202X%20NA%20SEMANA." target="_blank" class="w-full glass-panel hover:bg-brand-600 hover:border-brand-500 text-white font-bold py-4 px-6 rounded-xl flex justify-between items-center transition-all group duration-200">
                     <span>2x na semana</span>
-                    <span class="flex items-center gap-2"><i class="fa-brands fa-whatsapp text-brand-400 group-hover:text-white transition-colors text-xl"></i></span>
+                    <span class="flex items-center gap-2"><i class="fa-brands fa-whatsapp text-brand-400 group-hover:text-white text-xl"></i></span>
                 </a>
 
-                <a href="https://wa.me/5544991772323?text=Ol%C3%A1%20Thiago!%20Vi%20a%20tabela%20no%20site%20e%20gostaria%20de%20assinar%20o%20plano%20PRESENCIAL%20de%203X%20NA%20SEMANA." target="_blank" class="w-full bg-brand-600 border border-brand-500 text-white font-bold py-4 px-6 rounded-xl flex justify-between items-center transition-all hover:scale-[1.02] shadow-[0_0_20px_rgba(245,158,11,0.3)]">
+                <a href="https://wa.me/5544991772323?text=Ol%C3%A1%20Thiago!%20Vi%20a%20tabela%20no%20site%20e%20gostaria%20de%20assinar%20o%20plano%20PRESENCIAL%20de%203X%20NA%20SEMANA." target="_blank" class="w-full bg-brand-600 border border-brand-500 text-white font-bold py-4 px-6 rounded-xl flex justify-between items-center transition-all hover:scale-[1.02] shadow-[0_0_20px_rgba(245,158,11,0.3)] duration-300">
                     <span>3x na semana (Recomendado)</span>
                     <span class="flex items-center gap-2"><i class="fa-brands fa-whatsapp text-white text-xl"></i></span>
                 </a>
 
-                <a href="https://wa.me/5544991772323?text=Ol%C3%A1%20Thiago!%20Vi%20a%20tabela%20no%20site%20e%20gostaria%20de%20assinar%20o%20plano%20PRESENCIAL%20de%204X%20NA%20SEMANA." target="_blank" class="w-full glass-panel hover:bg-brand-600 hover:border-brand-500 text-white font-bold py-4 px-6 rounded-xl flex justify-between items-center transition-all group">
+                <a href="https://wa.me/5544991772323?text=Ol%C3%A1%20Thiago!%20Vi%20a%20tabela%20no%20site%20e%20gostaria%20de%20assinar%20o%20plano%20PRESENCIAL%20de%204X%20NA%20SEMANA." target="_blank" class="w-full glass-panel hover:bg-brand-600 hover:border-brand-500 text-white font-bold py-4 px-6 rounded-xl flex justify-between items-center transition-all group duration-200">
                     <span>4x na semana</span>
-                    <span class="flex items-center gap-2"><i class="fa-brands fa-whatsapp text-brand-400 group-hover:text-white transition-colors text-xl"></i></span>
+                    <span class="flex items-center gap-2"><i class="fa-brands fa-whatsapp text-brand-400 group-hover:text-white text-xl"></i></span>
                 </a>
 
-                <a href="https://wa.me/5544991772323?text=Ol%C3%A1%20Thiago!%20Vi%20a%20tabela%20no%20site%20e%20gostaria%20de%20assinar%20o%20plano%20PRESENCIAL%20de%205X%20NA%20SEMANA." target="_blank" class="w-full glass-panel hover:bg-brand-600 hover:border-brand-500 text-white font-bold py-4 px-6 rounded-xl flex justify-between items-center transition-all group">
+                <a href="https://wa.me/5544991772323?text=Ol%C3%A1%20Thiago!%20Vi%20a%20tabela%20no%20site%20e%20gostaria%20de%20assinar%20o%20plano%20PRESENCIAL%20de%205X%20NA%20SEMANA." target="_blank" class="w-full glass-panel hover:bg-brand-600 hover:border-brand-500 text-white font-bold py-4 px-6 rounded-xl flex justify-between items-center transition-all group duration-200">
                     <span>5x na semana</span>
-                    <span class="flex items-center gap-2"><i class="fa-brands fa-whatsapp text-brand-400 group-hover:text-white transition-colors text-xl"></i></span>
+                    <span class="flex items-center gap-2"><i class="fa-brands fa-whatsapp text-brand-400 group-hover:text-white text-xl"></i></span>
                 </a>
             </div>
         </div>
@@ -397,71 +343,53 @@
             <h2 class="text-3xl md:text-5xl font-black text-white tracking-tight uppercase">Mentoria <span class="text-brand-400">Online</span></h2>
             <p class="text-slate-400 text-lg mt-2 font-medium">Veja exatamente como funciona a estrutura por dentro do aplicativo.</p>
         </div>
-        
-        <div class="aspect-video w-full rounded-[2rem] overflow-hidden shadow-[0_0_40px_rgba(245,158,11,0.2)] border border-brand-500/30 bg-black">
+        <div class="aspect-video w-full rounded-[2rem] overflow-hidden shadow-[0_0_40px_rgba(245,158,11,0.15)] border border-brand-500/20 bg-black">
             <iframe width="100%" height="100%" src="https://www.youtube.com/embed/uJqeS1U-49Y?si=ONldIN4oQgpwcGw1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
     </section>
 
-    <section id="planos-online" class="py-16 px-6 max-w-7xl mx-auto border-b border-dark-800">
-        <div class="text-center mb-12 reveal">
-            <p class="text-slate-400 text-lg">O passo a passo da sua evolução onde quer que você treine.</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            
-            <div class="glass-panel p-8 md:p-10 rounded-[2.5rem] flex flex-col hover:border-brand-500/50 transition-colors reveal">
+    <section id="planos-online" class="py-24 px-6 max-w-7xl mx-auto border-b border-dark-800">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto items-stretch">
+            <div class="glass-panel p-8 md:p-10 rounded-[2.5rem] flex flex-col hover:border-brand-500/30 transition-all duration-300 reveal">
                 <h3 class="text-2xl font-black text-white mb-2 tracking-wide uppercase">Plano 30 Dias</h3>
-                <p class="text-brand-400 text-sm font-bold mb-6 pb-6 border-b border-dark-700/50">Até 5x sem juros no cartão</p>
-                <ul class="space-y-4 mb-8 flex-grow text-sm md:text-base text-slate-300 font-medium leading-relaxed">
-                    <li class="flex items-center"><i class="fa-solid fa-check text-brand-400 mr-3 text-lg"></i> App Próprio</li>
-                    <li class="flex items-center"><i class="fa-solid fa-check text-brand-400 mr-3 text-lg"></i> Suporte WhatsApp</li>
-                    <li class="flex items-center"><i class="fa-solid fa-check text-brand-400 mr-3 text-lg"></i> Correção de Vídeos</li>
+                <p class="text-brand-400 text-sm font-bold mb-6 pb-6 border-b border-dark-800">Até 5x sem juros no cartão</p>
+                <ul class="space-y-4 mb-8 flex-grow text-sm md:text-base text-slate-300 font-medium">
+                    <li class="flex items-center"><i class="fa-solid fa-check text-brand-400 mr-3"></i> App Próprio</li>
+                    <li class="flex items-center"><i class="fa-solid fa-check text-brand-400 mr-3"></i> Suporte WhatsApp</li>
+                    <li class="flex items-center"><i class="fa-solid fa-check text-brand-400 mr-3"></i> Correção de Vídeos</li>
                 </ul>
-                <div class="space-y-3">
-                    <a href="https://sun.eduzz.com/E9C6E1F6" target="_blank" class="w-full bg-brand-600 hover:bg-brand-500 text-white font-bold py-4 rounded-xl text-center transition-all flex items-center justify-center gap-2 shadow-lg active:scale-95 uppercase">
-                        Comprar no Cartão
-                    </a>
-                    <a href="https://wa.me/5569981499387?text=Ol%C3%A1%20Thiago!%20Quero%20assinar%20o%20plano%20ONLINE%20de%2030%20DIAS%20no%20PIX%20com%2010%25%20de%20desconto." target="_blank" class="w-full bg-[#25D366]/20 hover:bg-[#25D366]/30 border border-[#25D366]/50 text-[#25D366] font-bold py-3 rounded-xl text-center transition-all flex items-center justify-center gap-2 text-sm">
-                        <i class="fa-brands fa-whatsapp text-lg"></i> Comprar via PIX (-10%)
-                    </a>
+                <div class="space-y-3 mt-auto">
+                    <a href="https://sun.eduzz.com/E9C6E1F6" target="_blank" class="w-full bg-brand-600 hover:bg-brand-500 text-white font-bold py-4 rounded-xl text-center transition-all flex items-center justify-center shadow-md active:scale-95 uppercase duration-200">Comprar no Cartão</a>
+                    <a href="https://wa.me/5569981499387?text=Ol%C3%A1%20Thiago!%20Quero%20assinar%20o%20plano%20ONLINE%20de%2030%20DIAS%20no%20PIX%20com%2010%25%20de%20desconto." target="_blank" class="w-full bg-[#25D366]/10 hover:bg-[#25D366]/20 border border-[#25D366]/40 text-[#25D366] font-bold py-3 rounded-xl text-center transition-all flex items-center justify-center gap-2 text-sm duration-200"><i class="fa-brands fa-whatsapp text-lg"></i> Comprar via PIX (-10%)</a>
                 </div>
             </div>
 
-            <div class="glass-panel p-8 md:p-10 rounded-[2.5rem] border-brand-500 relative flex flex-col shadow-[0_0_40px_rgba(245,158,11,0.15)] transform md:-translate-y-6 reveal">
-                <div class="absolute top-0 inset-x-0 bg-gradient-to-r from-brand-600 to-brand-400 text-white text-xs font-black py-1.5 text-center rounded-t-[2.5rem] uppercase tracking-widest">Mais Escolhido</div>
+            <div class="glass-panel p-8 md:p-10 rounded-[2.5rem] border-brand-500/80 relative flex flex-col shadow-[0_0_50px_rgba(245,158,11,0.12)] transform md:-translate-y-6 transition-all duration-300 reveal bg-dark-900/40">
+                <div class="absolute top-0 inset-x-0 bg-gradient-to-r from-brand-600 to-brand-400 text-white text-xs font-black py-2 text-center rounded-t-[2.5rem] uppercase tracking-widest">Mais Escolhido</div>
                 <h3 class="text-2xl font-black text-white mb-2 mt-4 tracking-wide uppercase text-glow">Plano 60 Dias</h3>
-                <p class="text-brand-400 text-sm font-bold mb-6 pb-6 border-b border-dark-700/50">Até 5x sem juros no cartão</p>
-                <ul class="space-y-4 mb-8 flex-grow text-sm md:text-base text-slate-200 font-medium leading-relaxed">
-                    <li class="flex items-center"><i class="fa-solid fa-check text-brand-400 mr-3 text-lg"></i> Tudo do plano 30 dias</li>
-                    <li class="flex items-center"><i class="fa-solid fa-check text-brand-400 mr-3 text-lg"></i> Avaliação Completa</li>
-                    <li class="flex items-center"><i class="fa-solid fa-check text-brand-400 mr-3 text-lg"></i> Ajuste Fino de Carga (KG)</li>
+                <p class="text-brand-400 text-sm font-bold mb-6 pb-6 border-b border-dark-800">Até 5x sem juros no cartão</p>
+                <ul class="space-y-4 mb-8 flex-grow text-sm md:text-base text-slate-200 font-medium">
+                    <li class="flex items-center"><i class="fa-solid fa-check text-brand-400 mr-3"></i> Tudo do plano 30 dias</li>
+                    <li class="flex items-center"><i class="fa-solid fa-check text-brand-400 mr-3"></i> Avaliação Completa</li>
+                    <li class="flex items-center"><i class="fa-solid fa-check text-brand-400 mr-3"></i> Ajuste Fino de Carga (KG)</li>
                 </ul>
-                <div class="space-y-3">
-                    <a href="https://sun.eduzz.com/325172" target="_blank" class="w-full bg-brand-600 hover:bg-brand-500 text-white font-bold py-4 rounded-xl text-center transition-all flex items-center justify-center gap-2 shadow-[0_0_15px_rgba(245,158,11,0.4)] active:scale-95 uppercase">
-                        Comprar no Cartão
-                    </a>
-                    <a href="https://wa.me/5569981499387?text=Ol%C3%A1%20Thiago!%20Quero%20assinar%20o%20plano%20ONLINE%20de%2060%20DIAS%20no%20PIX%20com%2010%25%20de%20desconto." target="_blank" class="w-full bg-[#25D366]/20 hover:bg-[#25D366]/30 border border-[#25D366]/50 text-[#25D366] font-bold py-3 rounded-xl text-center transition-all flex items-center justify-center gap-2 text-sm">
-                        <i class="fa-brands fa-whatsapp text-lg"></i> Comprar via PIX (-10%)
-                    </a>
+                <div class="space-y-3 mt-auto">
+                    <a href="https://sun.eduzz.com/325172" target="_blank" class="w-full bg-brand-600 hover:bg-brand-500 text-white font-bold py-4 rounded-xl text-center transition-all flex items-center justify-center shadow-[0_0_20px_rgba(245,158,11,0.3)] active:scale-95 uppercase duration-200">Comprar no Cartão</a>
+                    <a href="https://wa.me/5569981499387?text=Ol%C3%A1%20Thiago!%20Quero%20assinar%20o%20plano%20ONLINE%20de%2060%20DIAS%20no%20PIX%20com%2010%25%20de%20desconto." target="_blank" class="w-full bg-[#25D366]/10 hover:bg-[#25D366]/20 border border-[#25D366]/40 text-[#25D366] font-bold py-3 rounded-xl text-center transition-all flex items-center justify-center gap-2 text-sm duration-200"><i class="fa-brands fa-whatsapp text-lg"></i> Comprar via PIX (-10%)</a>
                 </div>
             </div>
 
-            <div class="glass-panel p-8 md:p-10 rounded-[2.5rem] flex flex-col hover:border-brand-500/50 transition-colors reveal">
+            <div class="glass-panel p-8 md:p-10 rounded-[2.5rem] flex flex-col hover:border-brand-500/30 transition-all duration-300 reveal">
                 <h3 class="text-2xl font-black text-white mb-2 tracking-wide uppercase">Plano 90 Dias</h3>
-                <p class="text-brand-400 text-sm font-bold mb-6 pb-6 border-b border-dark-700/50">Até 5x sem juros no cartão</p>
-                <ul class="space-y-4 mb-8 flex-grow text-sm md:text-base text-slate-300 font-medium leading-relaxed">
-                    <li class="flex items-center"><i class="fa-solid fa-check text-brand-400 mr-3 text-lg"></i> Tudo do plano 60 dias</li>
-                    <li class="flex items-center"><i class="fa-solid fa-check text-brand-400 mr-3 text-lg"></i> Periodização Completa</li>
-                    <li class="flex items-center"><i class="fa-solid fa-check text-brand-400 mr-3 text-lg"></i> Transformação Absoluta</li>
+                <p class="text-brand-400 text-sm font-bold mb-6 pb-6 border-b border-dark-800">Até 5x sem juros no cartão</p>
+                <ul class="space-y-4 mb-8 flex-grow text-sm md:text-base text-slate-300 font-medium">
+                    <li class="flex items-center"><i class="fa-solid fa-check text-brand-400 mr-3"></i> Tudo do plano 60 dias</li>
+                    <li class="flex items-center"><i class="fa-solid fa-check text-brand-400 mr-3"></i> Periodização Completa</li>
+                    <li class="flex items-center"><i class="fa-solid fa-check text-brand-400 mr-3"></i> Transformação Absoluta</li>
                 </ul>
-                <div class="space-y-3">
-                    <a href="https://sun.eduzz.com/325173" target="_blank" class="w-full bg-brand-600 hover:bg-brand-500 text-white font-bold py-4 rounded-xl text-center transition-all flex items-center justify-center gap-2 shadow-lg active:scale-95 uppercase">
-                        Comprar no Cartão
-                    </a>
-                    <a href="https://wa.me/5569981499387?text=Ol%C3%A1%20Thiago!%20Quero%20assinar%20o%20plano%20ONLINE%20de%2090%20DIAS%20no%20PIX%20com%2010%25%20de%20desconto." target="_blank" class="w-full bg-[#25D366]/20 hover:bg-[#25D366]/30 border border-[#25D366]/50 text-[#25D366] font-bold py-3 rounded-xl text-center transition-all flex items-center justify-center gap-2 text-sm">
-                        <i class="fa-brands fa-whatsapp text-lg"></i> Comprar via PIX (-10%)
-                    </a>
+                <div class="space-y-3 mt-auto">
+                    <a href="https://sun.eduzz.com/325173" target="_blank" class="w-full bg-brand-600 hover:bg-brand-500 text-white font-bold py-4 rounded-xl text-center transition-all flex items-center justify-center shadow-md active:scale-95 uppercase duration-200">Comprar no Cartão</a>
+                    <a href="https://wa.me/5569981499387?text=Ol%C3%A1%20Thiago!%20Quero%20assinar%20o%20plano%20ONLINE%20de%2090%20DIAS%20no%20PIX%20com%2010%25%20de%20desconto." target="_blank" class="w-full bg-[#25D366]/10 hover:bg-[#25D366]/20 border border-[#25D366]/40 text-[#25D366] font-bold py-3 rounded-xl text-center transition-all flex items-center justify-center gap-2 text-sm duration-200"><i class="fa-brands fa-whatsapp text-lg"></i> Comprar via PIX (-10%)</a>
                 </div>
             </div>
         </div>
@@ -471,109 +399,71 @@
         <h2 class="text-3xl font-black text-center text-white mb-10 tracking-tight uppercase underline decoration-brand-500 underline-offset-8">Dúvidas Frequentes</h2>
         <div class="space-y-4">
             
-            <div class="glass-panel border-dark-700/50 rounded-2xl overflow-hidden hover:border-brand-500/30 transition-colors">
+            <div class="glass-panel border-dark-800 rounded-2xl overflow-hidden faq-item transition-all duration-300">
                 <button class="faq-btn w-full px-6 py-5 text-left font-bold text-white flex justify-between items-center focus:outline-none">
-                    <span class="text-lg">O treino serve para treinar em casa ou só na academia?</span>
+                    <span class="text-base md:text-lg">O treino serve para treinar em casa ou só na academia?</span>
                     <i class="fa-solid fa-plus text-brand-400 transition-transform duration-300 text-xl"></i>
                 </button>
-                <div class="faq-content hidden px-6 pb-5 text-slate-400 leading-relaxed border-t border-dark-800/50 pt-3">
+                <div class="faq-content hidden px-6 pb-5 text-slate-400 leading-relaxed border-t border-dark-800/60 pt-3 text-sm md:text-base">
                     Serve para os dois! O plano é 100% individualizado para o seu ambiente. Seja na academia com todas as máquinas ou na sua casa usando pesos livres e elásticos, o treino é adaptado para gerar o máximo de hipertrofia possível dependendo do seu equipamento.
                 </div>
             </div>
 
-            <div class="glass-panel border-dark-700/50 rounded-2xl overflow-hidden hover:border-brand-500/30 transition-colors">
+            <div class="glass-panel border-dark-800 rounded-2xl overflow-hidden faq-item transition-all duration-300">
                 <button class="faq-btn w-full px-6 py-5 text-left font-bold text-white flex justify-between items-center focus:outline-none">
-                    <span class="text-lg">Você faz atendimento presencial na academia?</span>
+                    <span class="text-base md:text-lg">Você faz atendimento presencial na academia?</span>
                     <i class="fa-solid fa-plus text-brand-400 transition-transform duration-300 text-xl"></i>
                 </button>
-                <div class="faq-content hidden px-6 pb-5 text-slate-400 leading-relaxed border-t border-dark-800/50 pt-3">
+                <div class="faq-content hidden px-6 pb-5 text-slate-400 leading-relaxed border-t border-dark-800/60 pt-3 text-sm md:text-base">
                     Sim! Tenho atendimento presencial como Treinador (aulas avulsas ou planos de 2x a 5x na semana). Verifique a tabela de preços na seção "Atendimento Presencial" acima e me chame no WhatsApp para agendarmos o seu horário.
                 </div>
             </div>
 
-            <div class="glass-panel border-dark-700/50 rounded-2xl overflow-hidden hover:border-brand-500/30 transition-colors">
+            <div class="glass-panel border-dark-800 rounded-2xl overflow-hidden faq-item transition-all duration-300">
                 <button class="faq-btn w-full px-6 py-5 text-left font-bold text-white flex justify-between items-center focus:outline-none">
-                    <span class="text-lg">Como funciona a correção de vídeos pelo WhatsApp?</span>
+                    <span class="text-base md:text-lg">Como funciona a correção de vídeos pelo WhatsApp?</span>
                     <i class="fa-solid fa-plus text-brand-400 transition-transform duration-300 text-xl"></i>
                 </button>
-                <div class="faq-content hidden px-6 pb-5 text-slate-400 leading-relaxed border-t border-dark-800/50 pt-3">
+                <div class="faq-content hidden px-6 pb-5 text-slate-400 leading-relaxed border-t border-dark-800/60 pt-3 text-sm md:text-base">
                     É muito simples. Você filma a sua execução de um exercício na academia ou em casa e me envia pelo WhatsApp. Eu analiso a sua postura, biomecânica e velocidade de execução, e te mando o que precisa corrigir para focar no músculo e evitar lesões.
                 </div>
             </div>
 
-            <div class="glass-panel border-dark-700/50 rounded-2xl overflow-hidden hover:border-brand-500/30 transition-colors">
+            <div class="glass-panel border-dark-800 rounded-2xl overflow-hidden faq-item transition-all duration-300">
                 <button class="faq-btn w-full px-6 py-5 text-left font-bold text-white flex justify-between items-center focus:outline-none">
-                    <span class="text-lg">A mentoria online tem limite de suporte ou horários?</span>
+                    <span class="text-base md:text-lg">A mentoria online tem limite de suporte ou horários?</span>
                     <i class="fa-solid fa-plus text-brand-400 transition-transform duration-300 text-xl"></i>
                 </button>
-                <div class="faq-content hidden px-6 pb-5 text-slate-400 leading-relaxed border-t border-dark-800/50 pt-3">
+                <div class="faq-content hidden px-6 pb-5 text-slate-400 leading-relaxed border-t border-dark-800/60 pt-3 text-sm md:text-base">
                     Não! O acesso via WhatsApp para alunos da mentoria online é sem restrições. Você pode tirar dúvidas no meio do seu treino ou ao final do dia.
                 </div>
             </div>
-
         </div>
     </section>
 
     <footer class="bg-dark-950 border-t border-dark-900 py-12">
         <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left">
-            
             <div class="flex flex-col items-center md:items-start">
                 <div class="flex items-center gap-3 mb-3 group">
-                    <img src="logo_thiago.png" alt="Logo Thiago Rosa" class="h-10 w-auto group-hover:scale-105 transition-transform">
+                    <img src="assets/img/logo_thiago.png" alt="Logo Thiago Rosa" class="h-10 w-auto group-hover:scale-105 transition-transform duration-300">
                     <span class="text-2xl font-black tracking-tighter text-brand-400 uppercase drop-shadow-md">THIAGO ROSA</span>
                 </div>
                 <p class="text-slate-500 text-sm">Mentoria Fitness Inteligente | CREF: 48153-G PR</p>
             </div>
-
             <div class="flex space-x-5 mt-6 md:mt-0">
-                <a href="https://instagram.com/othiagorosatreinador" target="_blank" class="w-12 h-12 rounded-full bg-dark-900 flex items-center justify-center text-slate-400 hover:bg-brand-500 hover:text-white transition-all shadow-inner"><i class="fa-brands fa-instagram text-xl"></i></a>
+                <a href="https://instagram.com/othiagorosatreinador" target="_blank" class="w-12 h-12 rounded-full bg-dark-900 flex items-center justify-center text-slate-400 hover:bg-brand-500 hover:text-white transition-all shadow-inner duration-300"><i class="fa-brands fa-instagram text-xl"></i></a>
             </div>
         </div>
-        <div class="max-w-7xl mx-auto px-6 text-center mt-12 pt-6 border-t border-dark-800/50 text-slate-600 text-sm font-medium">
+        <div class="max-w-7xl mx-auto px-6 text-center mt-12 pt-6 border-t border-dark-800/40 text-slate-600 text-sm font-medium">
             &copy; 2026 Thiago Rosa. Todos os direitos reservados. <br>
-            <span class="text-xs mt-3 block text-slate-500/50">Designed by <strong>Kaio Daniel</strong> | Campo Mourão, PR</span>
+            <span class="text-xs mt-3 block text-slate-500/40">Designed by <strong>Kaio Daniel</strong> | Campo Mourão, PR</span>
         </div>
     </footer>
 
-    <a href="https://wa.me/5569981499387?text=Ol%C3%A1%20Thiago!%20Vi%20seu%20site%20e%20quero%20entender%20mais%20sobre%20a%20mentoria." target="_blank" class="fixed bottom-6 right-6 w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center text-3xl shadow-lg z-50 hover:scale-110 transition-transform">
+    <a href="https://wa.me/5569981499387?text=Ol%C3%A1%20Thiago!%20Vi%20seu%20site%20e%20quero%20entender%20mais%20sobre%20a%20mentoria." target="_blank" class="fixed bottom-6 right-6 w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center text-3xl shadow-2xl z-50 hover:scale-110 active:scale-95 transition-transform duration-200">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
-    <script>
-        const btn = document.getElementById('menu-btn');
-        const menu = document.getElementById('mobile-menu');
-        const icon = document.getElementById('menu-icon');
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-            icon.classList.toggle('fa-bars');
-            icon.classList.toggle('fa-xmark');
-        });
-
-        const mobileLinks = document.querySelectorAll('.mobile-link');
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                menu.classList.add('hidden');
-                icon.classList.add('fa-bars');
-                icon.classList.remove('fa-xmark');
-            });
-        });
-
-        const faqBtns = document.querySelectorAll('.faq-btn');
-        faqBtns.forEach(btn => {
-            btn.addEventListener('click', function() {
-                this.nextElementSibling.classList.toggle('hidden');
-                this.querySelector('i').classList.toggle('rotate-45');
-            });
-        });
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                }
-            });
-        }, { threshold: 0.15 });
-        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
